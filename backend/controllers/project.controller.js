@@ -2,7 +2,7 @@ import Project from "../models/project.model.js";
 import { redis } from "../lib/redis.js";
 import cloudinary from "../lib/cloudinary.js";
 
-export const getProjects = async (req, res) => {
+export const getAllProjects = async (req, res) => {
     try {
         const projects = await Project.find({}).sort({ createdAt: -1 });
         res.json({ projects });
@@ -14,13 +14,27 @@ export const getProjects = async (req, res) => {
 
 export const getProject = async (req, res) => {
     try {
-        const project = await Project.findById(req.params.id);
-        if (!project) {
-            return res.status(404).json({ message: "Project not found" });
+        let featuredProject = await redis.get("featuredProject");
+        if (featuredProject) {
+            return res.json({ project: JSON.parse(featuredProject) });
+        }
+        featuredProject= await Project.findById({isFeatured: true});
+        if (!featuredProject) {
+            return res.status(404).json({ message: "Featured project not found" });
         }
         res.json({ project });
     } catch (error) {
         console.log("Error in getProject controller: ", error.message);
+        res.status(500).json({ message: "Server error", error: error.message });
+    }
+}
+
+export const getFeaturedProject = async (req, res) => {
+    try {
+        const featuredProject = await Project.find({ isFeatured: true });
+        res.json({ featuredProject });
+    } catch (error) {
+        console.log("Error in getFeaturedProject controller: ", error.message);
         res.status(500).json({ message: "Server error", error: error.message });
     }
 }
@@ -68,7 +82,7 @@ export const deleteProject = async (req, res) => {
             return res.status(404).json({ message: "Project not found" });
         }
         if (project.images) {
-            try{
+            try {
                 await Promise.all(project.images.map((image) => {
                     const publicId = image.split("/").pop().split(".")[0];
                     return cloudinary.uploader.destroy(`projects/${publicId}`);
@@ -89,7 +103,7 @@ export const deleteProject = async (req, res) => {
 export const toggleFeaturedProject = async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
-        if(project) {
+        if (project) {
             project.isFeatured = !project.isFeatured;
             const updatedProject = await project.save();
             await updateFeaturedProjectsCache();
