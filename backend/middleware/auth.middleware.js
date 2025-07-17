@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import Admin from "../models/admin.model";
+import Admin from "../models/admin.model.js";
 
 export const protectRoute = async (req, res, next) => {
     try{
