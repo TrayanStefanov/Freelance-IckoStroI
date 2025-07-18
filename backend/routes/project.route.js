@@ -10,3 +10,5 @@ router.post("/", protectRoute, createProject);
 router.delete("/:id", protectRoute, deleteProject);
 router.patch("/:id", protectRoute, toggleFeaturedProject);
 router.get("/:id", getProject);
+
+export default router;
