@@ -1,3 +1,29 @@
 {
-    
+    "site": {
+    "title": "Itskov Stroy – Renovations and Repairs in Sofia",
+    "description": "Itskov Stroy offers professional renovation and repair services for homes, offices, and buildings. Fast. Easy. High Quality.",
+    "keywords": "renovation, construction, repair services, Itskov Stroy, home renovation, bathroom repair, painting, drywall, plastering, Sofia, building company",
+    "author": "Aleksandar Ickov"
+  },
+  "navbar": {
+    "logo": "/logo_en_nobg.png",
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "services": "Services",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "phone": "+359 888 888888",
+    "email": "example@example.eu",
+    "slogan": "Contact us - and we will renovate your place!",
+    "social": "Socials",
+    "social-links": {
+      "linkedin": "https://www.linkedin.com/"
+    }
+  },
+  "language": {
+    "bg": "Bulgarian",
+    "en": "English"
+  }
 }
