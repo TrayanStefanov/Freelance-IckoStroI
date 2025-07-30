@@ -51,5 +51,33 @@
     "email": {
       "note": "Email:"
     }
+  },
+  "services": {
+    "intro": {
+      "title": "Our Services",
+      "text": "We provide flexible, high-quality solutions for your home or office. From small repairs to full-scale renovations – we’re with you every step of the way.",
+      "text2": "Explore our services below."
+    },
+    "provided": {
+      "title": "What We Offer",
+      "leftlist": {
+        "1": "Complete and partial renovations",
+        "2": "Bathroom and kitchen remodeling",
+        "3": "Drywall and partition walls",
+        "4": "Painting and plastering",
+        "5": "Flooring and tiling",
+        "6": "Electrical and plumbing work",
+        "7": "Thermal and waterproof insulation"
+      },
+      "rightlist": {
+        "1": "Professional execution of full or partial interior renovation projects.",
+        "2": "Modern and functional upgrades for bathrooms and kitchens.",
+        "3": "Drywall installation, partitioning, hidden lighting, and decorative structures.",
+        "4": "High-quality painting, wall preparation, and plastering work.",
+        "5": "Installation of laminate, tile, parquet, and other types of flooring.",
+        "6": "Electrical and plumbing installation or replacement by licensed professionals.",
+        "7": "Interior and exterior insulation for energy efficiency and protection."
+      }
+    }
   }
 }
