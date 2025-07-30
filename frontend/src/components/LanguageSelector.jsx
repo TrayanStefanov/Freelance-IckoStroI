@@ -33,10 +33,10 @@ const LanguageSelector = () => {
       id="language"
       value={language}
       onChange={handleLanguageChange}
-      className="p-2 bg-secondary text-primary border-primary border-2 self-center text-center"
+      className="p-2 bg-secondary text-primary border-primary border-2 self-center text-center focus:text-secondary focus:bg-primary"
     >
       {languageOptions.map((option, key) => (
-        <option className='md:text-l lg:text-xl bg-secondary m-auto' value={option.code} key={key}>
+        <option className='md:text-l lg:text-xl bg-secondary text-primary m-auto' value={option.code} key={key}>
           {option.language}
         </option>
       ))}
