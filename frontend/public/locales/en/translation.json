@@ -70,13 +70,41 @@
         "7": "Thermal and waterproof insulation"
       },
       "rightlist": {
-        "1": "Professional execution of full or partial interior renovation projects.",
-        "2": "Modern and functional upgrades for bathrooms and kitchens.",
-        "3": "Drywall installation, partitioning, hidden lighting, and decorative structures.",
-        "4": "High-quality painting, wall preparation, and plastering work.",
-        "5": "Installation of laminate, tile, parquet, and other types of flooring.",
-        "6": "Electrical and plumbing installation or replacement by licensed professionals.",
-        "7": "Interior and exterior insulation for energy efficiency and protection."
+        "1": [
+          "Full or partial renovations",
+          "Interior and exterior",
+          "Professional project execution"
+        ],
+        "2": [
+          "Bathroom and kitchen upgrades",
+          "Modern design",
+          "Improved functionality"
+        ],
+        "3": [
+          "Drywall and partition walls",
+          "Hidden lighting",
+          "Decorative elements"
+        ],
+        "4": [
+          "Wall preparation",
+          "High-quality painting",
+          "Plastering work"
+        ],
+        "5": [
+          "Laminate and tile installation",
+          "Parquet and vinyl",
+          "Floor leveling"
+        ],
+        "6": [
+          "Licensed electricians and plumbers",
+          "Installation and replacement",
+          "Code-compliant work"
+        ],
+        "7": [
+          "Interior and exterior insulation",
+          "Thermal protection",
+          "Waterproof sealing"
+        ]
       }
     }
   }
