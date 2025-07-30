@@ -7,21 +7,25 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'my-gradient': 'radial-gradient(circle,rgba(222, 228, 206, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+      }
+    },
   },
   plugins: [daisyui],
   daisyui: {
     themes: [
       {
         mytheme: {
-          "primary": "#506D51",
-          "primary-content": "#DEE4CE",
-          "secondary": "#DEE4CE",
-          "secondary-content": "#506D51",
-          "accent": "#143B5A",
-          "accent-content": "#ccd5dc",
+          "primary": "#000000",
+          "primary-content": "#d6ce36",
+          "secondary": "#ffffff",
+          "secondary-content": "#000000",
+          "accent": "#ee9707",
+          "accent-content": "#000000",
           "neutral": "#DEE4CE",
-          "neutral-content": "#506D51",
+          "neutral-content": "#12120f",
           "base-100": "#FFFFFF",
           "base-200": "#dedede",
           "base-300": "#bebebe",
@@ -32,21 +36,17 @@ export default {
           "success-content": "#001600",
           "warning": "#00ff00",
           "warning-content": "#001600",
-          "error": "#ff0000",
-          "error-content": "#160000",
-          "--rounded-btn": "0 rem",
+          "error": "#dc0b0b",
+          "error-content": "#d6ce36",
         },
-        backgroundImage: {
-                'my-gradient': 'radial-gradient(circle,rgba(222, 228, 206, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-            }
       },
-    ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "dark", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ":root", // The element that receives theme color CSS variables
-  },
+    ],
+  }, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+  darkTheme: "dark", // name of one of the included themes for dark mode
+  base: true, // applies background color and foreground color for root element by default
+  styled: true, // include daisyUI colors and design decisions for all components
+  utils: true, // adds responsive and modifier utility classes
+  prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+  logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+  themeRoot: ":root", // The element that receives theme color CSS variables
 }
