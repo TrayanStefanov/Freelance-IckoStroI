@@ -9,8 +9,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'my-gradient': 'radial-gradient(circle,rgba(222, 228, 206, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-      }
+        'radial-accent': 'radial-gradient(circle, #ee9707, #ffffff 90%)',
+        'linear-accent-right': 'linear-gradient(to right, #ee9707 40%, #ffffff 60%)',
+        'linear-accent-left': 'linear-gradient(to left, #ffffff 40%, #ee9707  60%)',
+      },
     },
   },
   plugins: [daisyui],
