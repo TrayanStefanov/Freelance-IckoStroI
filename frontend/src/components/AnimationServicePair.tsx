@@ -2,11 +2,12 @@ import { motion, easeOut } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const rubberBandSlideInFromLeft = {
+  hidden: { opacity: 0 },
   visible: {
-    x: ["-120%", "110%", "0%"],  // keyframe positions
+    x: ["-120%", "220%", "0%"],  // keyframe positions
     opacity: [0, 1, 1],          // opacity keyframes
     transition: {
-      duration: 3,
+      duration: 4,
       ease: easeOut,
       times: [0, 0.4, 1],       //keyframe percentages (0%, 40%, 100%)
     },
@@ -15,10 +16,10 @@ const rubberBandSlideInFromLeft = {
 
 const rubberBandSlideInFromRight = {
   visible: {
-    x: ["110%", "-120%", "0%"],
+    x: ["120%", "-220%", "0%"],
     opacity: [0, 1, 1],
     transition: {
-      duration: 3,
+      duration: 4,
       ease: easeOut,
       times: [0, 0.4, 1],
     },
@@ -27,7 +28,18 @@ const rubberBandSlideInFromRight = {
 
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 3, ease: easeOut, delay: 1 } }
+  visible: { opacity: 1, transition: { duration: 3, ease: easeOut, delay: 1.7 } }
+};
+
+const bgFadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 4.2 // AFTER the slide/fade animations complete
+    }
+  }
 };
 const ServicePair = ({
   index,
@@ -45,37 +57,66 @@ const ServicePair = ({
   const rightContent = isReversed ? t(leftKey) : t(rightKey);
 
   const leftVariant = isReversed ? fadeIn : rubberBandSlideInFromLeft;
-  const rightVariant = isReversed ? rubberBandSlideInFromRight: fadeIn;
+  const rightVariant = isReversed ? rubberBandSlideInFromRight : fadeIn;
 
-  const leftStyle = isReversed ? "font-normal bg-white border-accent border-2 z-9" : "font-bold bg-accent z-10";
-  const rightStyle = isReversed ? "font-bold bg-accent z-10 justify-end" : "font-normal bg-white border-accent border-2 z-9 text-right";
+  const leftStyle = isReversed ? "font-normal bg-white z-9 " : "font-bold bg-accent z-10";
+  const rightStyle = isReversed ? "font-bold bg-accent z-10 justify-end" : "font-normal bg-white z-9 justify-end";
 
   return (
-    <div className="flex flex-col md:flex-row w-full items-stretch mb-6">
-      {/* Left trapezoid */}
-      <div className="relative w-full md:w-1/2 flex">
-        <motion.div
-          className={`clip-trapezoid-left h-full w-full text-primary px-8 py-6 text-xl flex items-center ${leftStyle}`}
-          variants={leftVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <p className="pr-8">{leftContent}</p>
-        </motion.div>
-      </div>
+    <div className="relative w-full mb-6 min-h-[30vh]">
+      {/* Background image layer */}
+      <motion.div
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0"
+        style={{ backgroundImage: "url('/services-hero.jpg')" }}
+        variants={bgFadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      />
 
-      {/* Right trapezoid */}
-      <div className="relative w-full md:w-1/2 flex">
-        <motion.div
-          className={`clip-trapezoid-right h-full w-full text-base-content px-8 py-6 text-lg flex items-center ${rightStyle}`}
-          variants={rightVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <p className="pl-8">{rightContent}</p>
-        </motion.div>
+      {/* Foreground content over image */}
+      <div className="relative flex flex-col md:flex-row w-full border-accent border-2 min-h-[30vh] items-stretch justify-between z-10">
+        {/* Left trapezoid */}
+        <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
+          <motion.div
+            className={`clip-trapezoid-left h-full w-full text-primary px-8 py-6 text-xl flex items-center ${leftStyle}`}
+            variants={leftVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {Array.isArray(leftContent) ? (
+              <ul className="pr-8 list-disc list-inside">
+                {leftContent.map((item: string, idx: number) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="pr-8">{leftContent}</p>
+            )}
+          </motion.div>
+        </div>
+
+        {/* Right trapezoid */}
+        <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
+          <motion.div
+            className={`clip-trapezoid-right h-full w-full text-base-content px-8 py-6 text-lg flex items-center ${rightStyle}`}
+            variants={rightVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {Array.isArray(rightContent) ? (
+              <ul className="pl-8 list-disc list-inside">
+                {rightContent.map((item: string, idx: number) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="pl-8">{rightContent}</p>
+            )}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
