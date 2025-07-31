@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { FiAlertCircle } from 'react-icons/fi'
 
-const Error404Page = () => {
+const Error404 = () => {
   const { t } = useTranslation();
 
   return (
@@ -21,4 +21,4 @@ const Error404Page = () => {
   );
 };
 
-export default Error404Page
+export default Error404

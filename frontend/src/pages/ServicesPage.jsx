@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import ServicePair from "../components/AnimationServicePair";
 
-const ServicesPage = () => {
+const Services = () => {
   const { t } = useTranslation();
 
   return (
@@ -22,7 +22,7 @@ const ServicesPage = () => {
       </div>
       <div className='bg-radial-accent'>
         <h2 className='text-4xl md:text-5xl lg:text-6xl text-primary p-4 text-center mb-10'>{t("services.provided.title")}</h2>
-        <div className='max-w-[70vw] mx-auto hidden md:block'>
+        <div className='max-w-[80vw] mx-auto hidden md:block'>
           <div className="container mx-auto px-4">
             {[1, 2, 3, 4, 5, 6, 7].map((num, idx) => (
               <ServicePair
@@ -39,4 +39,4 @@ const ServicesPage = () => {
   )
 }
 
-export default ServicesPage
+export default Services
