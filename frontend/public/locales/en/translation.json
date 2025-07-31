@@ -34,22 +34,59 @@
     "btnservices": "Services",
     "slogan": "Your home. Our commitment. Fast. Easy. High quality."
   },
-  "contacts": {
-    "title": "Contacts",
-    "text": {
-      "normal": "Get in touch and take the first step toward your renewed home – ",
-      "bold": "fast, easy and high-quality."
+  "about": {
+    "intro": {
+      "title": "About Us",
+      "paragraph": {
+        "1": "Ickov Stroi is a Bulgarian renovation and construction company turning your ideas into reality. We work with private clients and businesses in Sofia and the surrounding area.",
+        "2": "From refreshing interiors to complete overhauls – our team delivers professionalism, transparency, and attention to every detail."
+      },
+      "subtitle": "What sets us apart:",
+      "list": {
+        "1": " - Clear deadlines and transparent pricing",
+        "2": " - A skilled team with diverse renovation experience",
+        "3": " - Personalized approach and close client collaboration"
+      }
     },
-    "location": {
-      "note": "Location:",
-      "value": "Sofia, Bulgaria"
+    "issues": {
+      "title": "Why choose US?",
+      "factors": {
+        "1": {
+          "title": "Time is money",
+          "text": "With us, renovations are done fast and hassle-free."
+        },
+        "2": {
+          "title": "Quality is never an accident.",
+          "text": "It is the result of conscious effort."
+        },
+        "3": {
+          "title": "Your property is losing value",
+          "text": "Neglected spaces lower your property's market value."
+        },
+        "4": {
+          "title": "You deserve comfort",
+          "text": "Your home or office should reflect your lifestyle and needs."
+        }
+      }
     },
-    "phone": {
-      "note": "Phone:",
-      "value": "+359 88 888 8888"
-    },
-    "email": {
-      "note": "Email:"
+    "section": {
+      "titles": {
+        "1": "What we do:",
+        "2": "What you get:",
+        "mobile": "What we do & what you get:"
+      },
+      "leftlist": {
+        "1": "Consult – understand your needs and options",
+        "2": "Plan – provide a detailed proposal and timeline",
+        "3": "Execute – deliver with quality and precision",
+        "4": "Complete – hand over a ready-to-use space"
+      },
+      "rightlist": {
+        "1": "Functional and beautiful environment",
+        "2": "No stress and no hidden costs",
+        "3": "Durable results",
+        "4": "Peace of mind and satisfaction"
+      }
     }
   },
   "services": {
@@ -106,6 +143,24 @@
           "Waterproof sealing"
         ]
       }
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "text": {
+      "normal": "Get in touch and take the first step toward your renewed home – ",
+      "bold": "fast, easy and high-quality."
+    },
+    "location": {
+      "note": "Location:",
+      "value": "Sofia, Bulgaria"
+    },
+    "phone": {
+      "note": "Phone:",
+      "value": "+359 88 888 8888"
+    },
+    "email": {
+      "note": "Email:"
     }
   },
   "404page": {
