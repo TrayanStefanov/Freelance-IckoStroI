@@ -107,5 +107,11 @@
         ]
       }
     }
+  },
+  "404page": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "text": "Sorry, the page you are looking for doesn’t exist or has been moved. Please use the navigation above to find what you are looking for.",
+    "btn": "Go to HomePage"
   }
 }
