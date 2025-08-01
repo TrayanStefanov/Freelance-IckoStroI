@@ -20,8 +20,8 @@ const Home = () => {
               {t("home.subtitle")}</h2>
             <h3 className="mb-5 text-xl md:text-2xl lg:text-3xl max-w-4xl justify-self-center">
               {t("home.more")}</h3>
-            <button className="btn btn-primary btn-wide rounded-l-lg border border-current"><Link to='/about'>{t("home.btnprojects")}</Link></button>
-            <button className="btn btn-primary btn-wide rounded-r-lg border border-current"><Link to='/services-and-scope'>{t("home.btnservices")}</Link></button>
+            <button className="btn btn-primary btn-wide rounded-l-lg border border-current"><Link to='/projects'>{t("home.btnprojects")}</Link></button>
+            <button className="btn btn-primary btn-wide rounded-r-lg border border-current"><Link to='/services'>{t("home.btnservices")}</Link></button>
           </div>
         </div>
       </div>
