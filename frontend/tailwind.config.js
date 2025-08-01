@@ -13,6 +13,9 @@ export default {
         'linear-accent-right': 'linear-gradient(to right, #ee9707 40%, #ffffff 60%)',
         'linear-accent-left': 'linear-gradient(to left, #ffffff 40%, #ee9707  60%)',
       },
+      rotate: {
+        '15': '15deg',
+      }
     },
   },
   plugins: [daisyui],
