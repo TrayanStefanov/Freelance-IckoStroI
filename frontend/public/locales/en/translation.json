@@ -69,24 +69,8 @@
         }
       }
     },
-    "section": {
-      "titles": {
-        "1": "What we do:",
-        "2": "What you get:",
-        "mobile": "What we do & what you get:"
-      },
-      "leftlist": {
-        "1": "Consult – understand your needs and options",
-        "2": "Plan – provide a detailed proposal and timeline",
-        "3": "Execute – deliver with quality and precision",
-        "4": "Complete – hand over a ready-to-use space"
-      },
-      "rightlist": {
-        "1": "Functional and beautiful environment",
-        "2": "No stress and no hidden costs",
-        "3": "Durable results",
-        "4": "Peace of mind and satisfaction"
-      }
+    "team": {
+      "title": "Trust our team with your renovation project"
     }
   },
   "services": {
