@@ -152,5 +152,12 @@
     "subtitle": "Page not found",
     "text": "Sorry, the page you are looking for doesn’t exist or has been moved. Please use the navigation above to find what you are looking for.",
     "btn": "Go to HomePage"
+  },
+  "project": {
+    "title": "Complete Bathroom Renovation",
+    "tags": "Renovation, Interior, Plumbing, Tiling",
+    "description": "We completely transformed an outdated and worn-down bathroom into a modern, functional, and aesthetically clean space. The project involved full demolition, installation of new water and drainage systems, waterproofing, tiling with high-quality ceramic tiles, and fitting new sanitary fixtures including a walk-in shower with glass paneling. We also integrated LED lighting and a suspended ceiling to create a bright and relaxing environment. The client requested a minimalist style with matte black accents for a contemporary look. The entire renovation was completed within 10 working days, with minimal disruption to the household. This project is a perfect example of how thoughtful design and professional execution can breathe new life into any home.",
+    "time": "10 working days",
+    "image": "/project-bath.jpg"
   }
 }
