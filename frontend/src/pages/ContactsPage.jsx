@@ -14,7 +14,7 @@ const Contacts = () => {
   const email = `${emailUser}@${emailDomain}`;
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden pt-24 pb-10'>
       <div className="flex flex-col bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
         <div className='flex flex-col-reverse lg:flex-row'>
           <div className="min-h-[40vh] lg:min-w-[40vw] text-center justify-items-center content-center text-primary">
