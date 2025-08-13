@@ -42,13 +42,13 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu dropdown-content bg-secondary text-primary z-[1] mt-5 min-w-[25vw] right-[-8px] shadow border border-primary">
-                        <li><Link to='/'>{t("navbar.home")}</Link></li>
-                        <li><Link to='/about'>{t("navbar.about")}</Link></li>
-                        <li><Link to='/projects'>{t("navbar.projects")}</Link></li>
-                        <li><Link to='/services'>{t("navbar.services")}</Link></li>
-                        <li><Link to='/contacts'>{t("navbar.contacts")}</Link></li>
-                        <li><LanguageSelector /></li>
+                        className="menu dropdown-content bg-secondary text-primary z-[1] mt-5 min-w-[100vw] lg:min-w-[25vw] right-[-8px] border border-l-0 border-r-0 border-primary">
+                        <li className="border-b border-primary mx-3"><Link to='/'>{t("navbar.home")}</Link></li>
+                        <li className="border-b border-primary mx-3"><Link to='/about'>{t("navbar.about")}</Link></li>
+                        <li className="border-b border-primary mx-3"><Link to='/projects'>{t("navbar.projects")}</Link></li>
+                        <li className="border-b border-primary mx-3"><Link to='/services'>{t("navbar.services")}</Link></li>
+                        <li className="border-b border-primary mx-3"><Link to='/contacts'>{t("navbar.contacts")}</Link></li>
+                        <li className="mt-2"><LanguageSelector /></li>
                     </ul>
                 </div>
             </div>
