@@ -45,10 +45,12 @@ const ServicePair = ({
   index,
   leftKey,
   rightKey,
+  image,
 }: {
   index: number;
   leftKey: string;
   rightKey: string;
+  image?: string;
 }) => {
   const { t } = useTranslation();
   const isReversed = index % 2 !== 0;
@@ -59,27 +61,31 @@ const ServicePair = ({
   const leftVariant = isReversed ? fadeIn : rubberBandSlideInFromLeft;
   const rightVariant = isReversed ? rubberBandSlideInFromRight : fadeIn;
 
-  const leftStyle = isReversed ? "font-normal bg-white z-9 " : "font-bold bg-accent z-10";
-  const rightStyle = isReversed ? "font-bold bg-accent z-10 justify-end" : "font-normal bg-white z-9 justify-end";
+  const leftStyle = isReversed
+    ? "font-normal bg-white z-9 justify-end"
+    : "font-bold bg-accent z-10";
+  const rightStyle = isReversed
+    ? "font-bold bg-accent z-10"
+    : "font-normal bg-white z-9 justify-end";
 
   return (
     <div className="relative w-full mb-6 min-h-[30vh]">
       {/* Background image layer */}
       <motion.div
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0"
-        style={{ backgroundImage: "url('/services-hero.jpg')" }}
+        className="absolute inset-0 bg-center bg-contain bg-no-repeat z-0 scale-100"
+        style={{ backgroundImage: `url(${image || "/services-hero.jpg"})` }}
         variants={bgFadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       />
 
-      {/* Foreground content over image */}
+      {/* Foreground content */}
       <div className="relative flex flex-col md:flex-row w-full border-accent border-2 min-h-[30vh] items-stretch justify-between z-10">
         {/* Left trapezoid */}
         <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
           <motion.div
-            className={`clip-trapezoid-left h-full w-full text-primary px-8 py-6 text-xl flex items-center ${leftStyle}`}
+            className={`clip-trapezoid-left h-full w-full text-primary px-8 py-6 text-xl flex flex-col items-start gap-3 ${leftStyle}`}
             variants={leftVariant}
             initial="hidden"
             whileInView="visible"
@@ -100,7 +106,7 @@ const ServicePair = ({
         {/* Right trapezoid */}
         <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
           <motion.div
-            className={`clip-trapezoid-right h-full w-full text-base-content px-8 py-6 text-lg flex items-center ${rightStyle}`}
+            className={`clip-trapezoid-right h-full w-full text-base-content px-8 py-6 text-lg flex flex-col items-end gap-3 ${rightStyle}`}
             variants={rightVariant}
             initial="hidden"
             whileInView="visible"
@@ -122,5 +128,4 @@ const ServicePair = ({
   );
 };
 
-export default ServicePair;
-
+export default ServicePair
