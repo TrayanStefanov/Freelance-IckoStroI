@@ -8,7 +8,7 @@ const Navbar = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="navbar bg-secondary justify-between z-50 shadow-md  border-b-2 border-primary">
+        <div className="navbar bg-secondary justify-between z-50 shadow-md  border-b-2 border-primary fixed">
             <div className="navbar-start aspect-3/1 max-w-[240px] min-w-[120px]">
                 <Link to='/'>
                     <img src={t("navbar.logo")} className="w-64 ml-4" alt="" />
