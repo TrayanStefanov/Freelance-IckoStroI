@@ -1,17 +1,23 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 
 const Navbar = () => {
     const { t } = useTranslation();
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <div className="navbar bg-secondary justify-between z-50 shadow-md  border-b-2 border-primary fixed">
-            <div className="navbar-start aspect-3/1 max-w-[240px] min-w-[120px]">
+            <div className="navbar-start aspect-3/1 md:max-w-[180px] lg:max-w-[240px] min-w-[120px]">
                 <Link to='/'>
-                    <img src={t("navbar.logo")} className="w-64 ml-4" alt="" />
+                    <img src={t("navbar.logo")} className="w-40 lg:w-64 ml-4" alt="" />
                 </Link>
             </div>
             <div className="navbar-center hidden md:flex">
@@ -25,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end w-auto">
-                <div className="dropdown">
+                <div className="dropdown relative">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +48,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu dropdown-content bg-secondary text-primary z-[1] mt-5 min-w-[100vw] lg:min-w-[25vw] right-[-8px] border border-l-0 border-r-0 border-primary">
+                        className="menu dropdown-content bg-secondary text-primary z-[1] absolute top-[110%] min-w-[100vw] lg:min-w-[25vw] right-[-8px] border border-l-0 border-r-0 border-primary">
                         <li className="border-b border-primary mx-3"><Link to='/'>{t("navbar.home")}</Link></li>
                         <li className="border-b border-primary mx-3"><Link to='/about'>{t("navbar.about")}</Link></li>
                         <li className="border-b border-primary mx-3"><Link to='/projects'>{t("navbar.projects")}</Link></li>
