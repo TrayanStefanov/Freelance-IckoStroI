@@ -126,6 +126,15 @@
           "Thermal protection",
           "Waterproof sealing"
         ]
+      },
+      "images": {
+        "1": "/services-complete.jpg",
+        "2": "/services-bathroom.jpg",
+        "3": "/services-drywall.jpg",
+        "4": "/services-painting.jpg",
+        "5": "/services-floor-laminate.jpg",
+        "6": "/services-electrical.jpg",
+        "7": "/services-thermall.jpg"
       }
     }
   },
