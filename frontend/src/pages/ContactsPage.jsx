@@ -27,7 +27,9 @@ const Contacts = () => {
           </div>
           <div className="min-h-[40vh] min-w-[60vw] text-center content-center text-primary flex flex-col lg:hidden justify-evenly">
             <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><TbLocation /></div><div className='m-2 self-center'>{t("contacts.location.note")}</div></b>{t("contacts.location.value")}</h2>
+            <div className='divider'></div>
             <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><FiPhoneCall /></div><div className='m-2 self-center'>{t("contacts.phone.note")}</div></b>{t("contacts.phone.value")}</h2>
+            <div className='divider'></div>
             <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><FiMail /></div><div className='m-2 self-center'>{t("contacts.email.note")}</div></b>{email}</h2>
           </div>
           </div>
