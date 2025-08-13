@@ -13,6 +13,11 @@ const Navbar = () => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
 
+    const isActive = (path) =>
+    location.pathname === path
+      ? "text-accent font-bold"
+      : "";
+
     return (
         <div className="navbar bg-secondary justify-between z-50 shadow-md  border-b-2 border-primary fixed">
             <div className="navbar-start aspect-3/1 md:max-w-[180px] lg:max-w-[240px] min-w-[120px]">
@@ -22,11 +27,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center">
-                    <li className="px-1 ps-4"><Link className="px-2 py-1" to='/'>{t("navbar.home")}</Link></li>
-                    <li className="px-1"><Link className="px-2 py-1" to='/about'>{t("navbar.about")}</Link></li>
-                    <li className="px-1"><Link className="px-2 py-1" to='/projects'>{t("navbar.projects")}</Link></li>
-                    <li className="px-1"><Link className="px-2 py-1" to='/services'>{t("navbar.services")}</Link></li>
-                    <li className="px-1"><Link className="px-2 py-1" to='/contacts'>{t("navbar.contacts")}</Link></li>
+                    <li className="px-1 ps-4"><Link className={`px-2 py-1 ${isActive("/")}`}  to='/'>{t("navbar.home")}</Link></li>
+                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/about")}`} to='/about'>{t("navbar.about")}</Link></li>
+                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/projects")}`} to='/projects'>{t("navbar.projects")}</Link></li>
+                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/services")}`} to='/services'>{t("navbar.services")}</Link></li>
+                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/contacts")}`} to='/contacts'>{t("navbar.contacts")}</Link></li>
                     <li className="px-1"><LanguageSelector /></li>
                 </ul>
             </div>
