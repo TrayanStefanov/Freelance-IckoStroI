@@ -23,8 +23,8 @@ const Home = () => {
             <button className="btn btn-primary btn-wide hidden lg:inline-flex rounded-l-lg border border-current"><Link to='/projects'>{t("home.btnprojects")}</Link></button>
             <button className="btn btn-primary btn-wide hidden lg:inline-flex rounded-r-lg border border-current"><Link to='/services'>{t("home.btnservices")}</Link></button>
             <div className='flex lg:hidden'>
-            <button className="btn btn-primary w-1/2 h-[25vh] border border-current"><Link to='/projects'>{t("home.btnprojects")}</Link></button>
-            <button className="btn btn-primary w-1/2 h-[25vh] border border-current"><Link to='/services'>{t("home.btnservices")}</Link></button>
+            <button className="btn btn-primary w-1/2 h-[25vh] border border-current" style={{ backgroundImage: "url(/home-projects-btn.jpg", backgroundSize: "cover", backgroundPosition: "center"}}><Link to='/projects'>{t("home.btnprojects")}</Link></button>
+            <button className="btn btn-primary w-1/2 h-[25vh] border border-current" style={{ backgroundImage: "url(/home-services-btn.jpg", backgroundSize: "cover", backgroundPosition: "center"}}><Link to='/services'>{t("home.btnservices")}</Link></button>
             </div>
           </div>
         </div>
