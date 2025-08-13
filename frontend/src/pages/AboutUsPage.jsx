@@ -29,19 +29,19 @@ const AboutUs = () => {
       <div className='text-primary'>
         <h2 className='text-5xl lg:text-4xl text-center mb-6 p-10'>{t("about.issues.title")}</h2>
         <div className='max-w-[80vw] hidden lg:flex sm:flex-col lg:flex-row m-auto justify-around justify-self-center'>
-          <div className='xl:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
+          <div className='lg:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
             <h6 className='text-3xl lg:text-xl font-bold mb-4 underline underline-offset-8 decoration-accent'>{t("about.issues.factors.1.title")}</h6>
             <p className='text-l'>{t("about.issues.factors.1.text")}</p>
           </div>
-          <div className='xl:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
+          <div className='lg:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
             <h6 className='text-3xl lg:text-xl font-bold mb-4 underline underline-offset-8 decoration-accent'>{t("about.issues.factors.2.title")}</h6>
             <p className='text-l'>{t("about.issues.factors.2.text")}</p>
           </div>
-          <div className='xl:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
+          <div className='lg:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
             <h6 className='text-3xl lg:text-xl font-bold mb-4 underline underline-offset-8 decoration-accent'>{t("about.issues.factors.3.title")}</h6>
             <p className='text-l'>{t("about.issues.factors.3.text")}</p>
           </div>
-          <div className='xl:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
+          <div className='lg:w-1/5 p-5 border-accent border-4 rounded-xl border-double justify-items-center text-center bg-secondary m-2'>
             <h6 className='text-3xl lg:text-xl font-bold mb-4 underline underline-offset-8 decoration-accent'>{t("about.issues.factors.4.title")}</h6>
             <p className='text-l'>{t("about.issues.factors.4.text")}</p>
           </div>
