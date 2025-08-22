@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Itskov Stroy – Renovations and Repairs in Sofia",
+    "title": "Itskov Stroy - Renovations and Repairs in Sofia",
     "description": "Itskov Stroy offers professional renovation and repair services for homes, offices, and buildings. Fast. Easy. High Quality.",
     "keywords": "renovation, construction, repair services, Itskov Stroy, home renovation, bathroom repair, painting, drywall, plastering, Sofia, building company",
     "author": "Aleksandar Ickov"
@@ -38,14 +38,13 @@
     "intro": {
       "title": "About Us",
       "paragraph": {
-        "1": "Ickov Stroi is a Bulgarian renovation and construction company turning your ideas into reality. We work with private clients and businesses in Sofia and the surrounding area.",
-        "2": "From refreshing interiors to complete overhauls – our team delivers professionalism, transparency, and attention to every detail."
+        "1": "Itskov Stroy Ltd. is a company focused on quality interior renovations, founded with a clear mission - to restore trust in reliable and responsible construction.",
+        "2": "We work with both individuals and businesses alike, offering a full range of services for apartments, houses, and commercial properties."
       },
-      "subtitle": "What sets us apart:",
-      "list": {
-        "1": " - Clear deadlines and transparent pricing",
-        "2": " - A skilled team with diverse renovation experience",
-        "3": " - Personalized approach and close client collaboration"
+      "subtitle": "What differentiates us?",
+      "text": {
+        "1": "In a world where 'renovation' is often associated with delays, compromises, and unnecessary stress – we choose a different path.",
+        "2": "With us, you'll find a team that works with responsibility, dedication, and a personal approach. We don't make promises we can't keep. We value clear communication, honesty, and the highest quality in every service we provide."
       }
     },
     "issues": {
@@ -76,67 +75,138 @@
   "services": {
     "intro": {
       "title": "Our Services",
-      "text": "We provide flexible, high-quality solutions for your home or office. From small repairs to full-scale renovations – we’re with you every step of the way.",
+      "text": "We offer flexible and high-quality solutions for home and office. From small improvements to complete renovations – we are with you every step of the way.",
       "text2": "Explore our services below."
     },
-    "provided": {
-      "title": "What We Offer",
-      "leftlist": {
-        "1": "Complete and partial renovations",
-        "2": "Bathroom and kitchen remodeling",
-        "3": "Drywall and partition walls",
-        "4": "Painting and plastering",
-        "5": "Flooring and tiling",
-        "6": "Electrical and plumbing work",
-        "7": "Thermal and waterproof insulation"
+    "serviceList": [
+      {
+        "left": {
+          "title": "Complete and Partial Interior Renovations",
+          "description": "If you need a total renovation – without searching for separate contractors for every task – we are here. And we offer:"
+        },
+        "right": {
+          "tasks": [
+            "Full renovation from A to Z – planning, execution, finishing details",
+            "One organization, one team – saving you time and stress",
+            "Regular communication and reliability throughout the process",
+            "Completion on time and according to agreed parameters"
+          ],
+          "text": "You relax – we take care of everything else."
+        },
+        "image": "/services-complete.jpg"
       },
-      "rightlist": {
-        "1": [
-          "Full or partial renovations",
-          "Interior and exterior",
-          "Professional project execution"
-        ],
-        "2": [
-          "Bathroom and kitchen upgrades",
-          "Modern design",
-          "Improved functionality"
-        ],
-        "3": [
-          "Drywall and partition walls",
-          "Hidden lighting",
-          "Decorative elements"
-        ],
-        "4": [
-          "Wall preparation",
-          "High-quality painting",
-          "Plastering work"
-        ],
-        "5": [
-          "Laminate and tile installation",
-          "Parquet and vinyl",
-          "Floor leveling"
-        ],
-        "6": [
-          "Licensed electricians and plumbers",
-          "Installation and replacement",
-          "Code-compliant work"
-        ],
-        "7": [
-          "Interior and exterior insulation",
-          "Thermal protection",
-          "Waterproof sealing"
-        ]
+      {
+        "left": {
+          "title": "Electrical Services",
+          "description": "Safety, functionality, and good aesthetics – that’s our standard. We provide:"
+        },
+        "right": {
+          "tasks": [
+            "Complete wiring for new or renovated properties",
+            "Replacement of electrical panels, sockets, switches, and lighting",
+            "Installation of concealed wiring with PVC channels or conduits",
+            "Diagnostics and troubleshooting"
+          ],
+          "text": "We work according to all safety standards and with the required documentation."
+        },
+        "image": "/services-electrical.jpg"
       },
-      "images": {
-        "1": "/services-complete.jpg",
-        "2": "/services-bathroom.jpg",
-        "3": "/services-drywall.jpg",
-        "4": "/services-painting.jpg",
-        "5": "/services-floor-laminate.jpg",
-        "6": "/services-electrical.jpg",
-        "7": "/services-thermall.jpg"
+      {
+        "left": {
+          "title": "Plumbing Services",
+          "description": "Plumbing should be done once – but done right. We offer:"
+        },
+        "right": {
+          "tasks": [
+            "Replacement and installation of new plumbing systems",
+            "Installation of sinks, boilers, toilets, shower cabins, and more",
+            "Work with polypropylene, copper, and PVC pipes"
+          ],
+          "text": "Everything is securely installed, pressure-tested, and inspected before completion."
+        },
+        "image": "/services-bathroom.jpg"
+      },
+      {
+        "left": {
+          "title": "Drywall",
+          "description": "Drywall gives freedom for all kinds of interior solutions. With it we:"
+        },
+        "right": {
+          "tasks": [
+            "Construct suspended ceilings, partition walls, concealed lighting",
+            "Create niches, shelves, decorative elements",
+            "Straighten uneven walls and ceilings",
+            "Install with durable constructions and strong plastering"
+          ],
+          "text": "A perfect solution for modern interiors, insulation, and soundproofing."
+        },
+        "image": "/services-drywall.jpg"
+      },
+      {
+        "left": {
+          "title": "Tile Installation",
+          "description": "Tiles are not just cladding – they create style and comfort. We guarantee:"
+        },
+        "right": {
+          "tasks": [
+            "Installation of floor and wall tiles – bathroom, kitchen, hallway, terrace",
+            "Precise leveling and consistent grouting",
+            "Work with faience, terracotta, granite and mosaic tiles",
+            "Proper finishing of corners, trims, and transitions"
+          ],
+          "text": "We perfect every detail, because in the bathroom there is no room for mistakes."
+        },
+        "image": "/services-floor-laminate.jpg"
+      },
+      {
+        "left": {
+          "title": "Painting",
+          "description": "With a new color, your home literally comes to life again. We offer:"
+        },
+        "right": {
+          "tasks": [
+            "Interior painting with latex, oil-based paint, decorative effects",
+            "Consultation on colors and combinations",
+            "Surface preparation (priming, plastering if needed)",
+            "Clean and precise work – no drips or stains"
+          ],
+          "text": "We work fast and clean, so painting doesn’t turn into a nightmare, but a pleasure."
+        },
+        "image": "/services-painting.jpg"
+      },
+      {
+        "left": {
+          "title": "Plastering",
+          "description": "Beautiful walls start with a solid base. We provide:"
+        },
+        "right": {
+          "tasks": [
+            "Cement, gypsum, and fine plaster – depending on the wall type",
+            "Leveling and smoothing surfaces",
+            "Preparation for painting or wallpapering",
+            "Repair of cracks, uneven areas, and other defects"
+          ],
+          "text": "We use high-quality mixes and professional tools to achieve perfectly smooth walls and ceilings."
+        },
+        "image": "/services-thermall.jpg"
+      },
+      {
+        "left": {
+          "title": "Floor Screed",
+          "description": "A strong and level floor base is the start of every good renovation. We provide:"
+        },
+        "right": {
+          "tasks": [
+            "Machine and manual screed – depending on the room type and requirements",
+            "Precise floor leveling",
+            "Fast drying and the ability to step on it in a short time",
+            "Proper preparation for all types of flooring – tiles, parquet, laminate, vinyl"
+          ],
+          "text": "We use high-quality materials that guarantee durability and long life of the floor covering."
+        },
+        "image": "/services-thermall.jpg"
       }
-    }
+    ]
   },
   "contacts": {
     "title": "Contacts",
