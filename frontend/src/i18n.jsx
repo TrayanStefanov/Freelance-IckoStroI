@@ -3,9 +3,14 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
 
-i18next.use(LanguageDetector).use(initReactI18next).use(Backend).init({
+i18next.use(Backend).use(LanguageDetector).use(initReactI18next).init({
   returnObjects: true,
   fallbackLng: "bg",
-  debug: true, //To enable us see errors
-  //   lng: "en", //Default language as english
+  debug: true, 
+
+  supportedLngs: ["en", "bg"],
+  detection : {
+    order: ["querystring", "localStorage", "navigator"],
+    caches: ["localStorage"],
+  } 
 });
