@@ -1,12 +1,8 @@
-import React from 'react'
-
+import React from "react";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { TbLocation } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
-
 const Contacts = () => {
-
   const { t } = useTranslation();
 
   const emailUser = "example";
@@ -14,32 +10,57 @@ const Contacts = () => {
   const email = `${emailUser}@${emailDomain}`;
 
   return (
-    <div className='overflow-hidden pt-24 pb-10'>
+    <div className="overflow-hidden pt-40 pb-10">
       <div className="flex flex-col bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
-        <div className='flex flex-col-reverse lg:flex-row'>
-          <div className="min-h-[40vh] lg:min-w-[40vw] text-center justify-items-center content-center text-primary">
-            <h1 className='text-4xl lg:text-5xl p-5'>{t("contacts.title")}</h1>
-            <p className='p-5 max-w-[80vw]'>{t("contacts.text.normal")}<b className='indent-2'>{t("contacts.text.bold")}</b></p>
-            <div className="lg:min-w-[40vw] text-center content-center text-primary hidden lg:block">
-            <h2 className='text-2xl flex justify-center items-center m-2'><TbLocation /><b className='mx-2'>{t("contacts.location.note")}</b>{t("contacts.location.value")}</h2>
-            <h2 className='text-2xl flex justify-center items-center m-2'><FiPhoneCall /><b className='mx-2'>{t("contacts.phone.note")}</b>{t("contacts.phone.value")}</h2>
-            <h2 className='text-2xl flex justify-center items-center m-2'><FiMail /><b className='mx-2'>{t("contacts.email.note")}</b>{email}</h2>
+        <div className="flex flex-col-reverse lg:flex-row">
+          {/* LEFT SIDE: Contact details */}
+          <div className="min-h-[40vh] lg:w-1/2 text-center flex flex-col justify-center items-center text-primary p-6">
+            <h1 className="text-4xl lg:text-5xl mb-6">{t("contacts.title")}</h1>
+            <p className="mb-6 max-w-[80vw]">
+              {t("contacts.text.normal")}
+              <b className="ml-2">{t("contacts.text.bold")}</b>
+            </p>
+
+            <div className="flex flex-col gap-6 w-full max-w-lg">
+              <h2 className="text-lg lg:text-2xl flex items-center justify-center">
+                <FiPhoneCall className="mx-2" />
+                <b className="mx-2">{t("contacts.phone.note")}</b>
+                {t("contacts.phone.value")}
+              </h2>
+
+              <h2 className="text-lg lg:text-2xl flex items-center justify-center">
+                <FiMail className="mx-2" />
+                <b className="mx-2">{t("contacts.email.note")}</b>
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:underline break-all"
+                >
+                  {email}
+                </a>
+              </h2>
+            </div>
           </div>
-          <div className="min-h-[40vh] min-w-[60vw] text-center content-center text-primary flex flex-col lg:hidden justify-evenly">
-            <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><TbLocation /></div><div className='m-2 self-center'>{t("contacts.location.note")}</div></b>{t("contacts.location.value")}</h2>
-            <div className='divider'></div>
-            <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><FiPhoneCall /></div><div className='m-2 self-center'>{t("contacts.phone.note")}</div></b>{t("contacts.phone.value")}</h2>
-            <div className='divider'></div>
-            <h2 className='text-base flex justify-center items-center flex-col'><b className='m-2 flex flex-row'><div className='self-center m-2'><FiMail /></div><div className='m-2 self-center'>{t("contacts.email.note")}</div></b>{email}</h2>
-          </div>
-          </div>
-          <div>
-            <img className='lg:max-w-[40vw] lg:min-w-[82vw] object-cover' src="./contacts.jpg" alt="" />
+
+          {/* RIGHT SIDE: Google Map */}
+          <div className="lg:w-1/2 w-full h-[300px] lg:h-auto">
+            <iframe
+              title="Business area"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93836.37935954207!2d23.241546740875236!3d42.69552878928868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia!5e0!3m2!1sen!2sbg!4v1755696992586!5m2!1sen!2sbg"
+              width="100%"
+              height="100%"
+              style={{
+                border:0
+              }} 
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contacts
+export default Contacts;
