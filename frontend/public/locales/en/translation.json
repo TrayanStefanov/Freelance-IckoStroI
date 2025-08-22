@@ -98,7 +98,7 @@
       {
         "left": {
           "title": "Electrical Services",
-          "description": "Safety, functionality, and good aesthetics – that’s our standard. We provide:"
+          "description": "We work according to all safety standards and with the required documentation. We provide:"
         },
         "right": {
           "tasks": [
@@ -107,14 +107,14 @@
             "Installation of concealed wiring with PVC channels or conduits",
             "Diagnostics and troubleshooting"
           ],
-          "text": "We work according to all safety standards and with the required documentation."
+          "text": "Safety, functionality, and good aesthetics – that’s our standard."
         },
         "image": "/services-electrical.jpg"
       },
       {
         "left": {
           "title": "Plumbing Services",
-          "description": "Plumbing should be done once – but done right. We offer:"
+          "description": "Everything is securely installed, pressure-tested, and inspected before completion. We offer:"
         },
         "right": {
           "tasks": [
@@ -122,7 +122,7 @@
             "Installation of sinks, boilers, toilets, shower cabins, and more",
             "Work with polypropylene, copper, and PVC pipes"
           ],
-          "text": "Everything is securely installed, pressure-tested, and inspected before completion."
+          "text": "Plumbing should be done once – but done right."
         },
         "image": "/services-bathroom.jpg"
       },
@@ -145,7 +145,7 @@
       {
         "left": {
           "title": "Tile Installation",
-          "description": "Tiles are not just cladding – they create style and comfort. We guarantee:"
+          "description": "We perfect every detail, because in the bathroom there is no room for mistakes. We guarantee:"
         },
         "right": {
           "tasks": [
@@ -154,14 +154,14 @@
             "Work with faience, terracotta, granite and mosaic tiles",
             "Proper finishing of corners, trims, and transitions"
           ],
-          "text": "We perfect every detail, because in the bathroom there is no room for mistakes."
+          "text": "Tiles are not just cladding – they create style and comfort."
         },
         "image": "/services-floor-laminate.jpg"
       },
       {
         "left": {
           "title": "Painting",
-          "description": "With a new color, your home literally comes to life again. We offer:"
+          "description": "We work fast and clean, so painting doesn’t turn into a nightmare, but a pleasure. We offer:"
         },
         "right": {
           "tasks": [
@@ -170,14 +170,14 @@
             "Surface preparation (priming, plastering if needed)",
             "Clean and precise work – no drips or stains"
           ],
-          "text": "We work fast and clean, so painting doesn’t turn into a nightmare, but a pleasure."
+          "text": "With a new color, your home literally comes to life again."
         },
         "image": "/services-painting.jpg"
       },
       {
         "left": {
           "title": "Plastering",
-          "description": "Beautiful walls start with a solid base. We provide:"
+          "description": "We use high-quality mixes and professional tools to achieve perfectly smooth walls and ceilings. We provide:"
         },
         "right": {
           "tasks": [
@@ -186,14 +186,14 @@
             "Preparation for painting or wallpapering",
             "Repair of cracks, uneven areas, and other defects"
           ],
-          "text": "We use high-quality mixes and professional tools to achieve perfectly smooth walls and ceilings."
+          "text": "Beautiful walls start with a solid base."
         },
         "image": "/services-thermall.jpg"
       },
       {
         "left": {
           "title": "Floor Screed",
-          "description": "A strong and level floor base is the start of every good renovation. We provide:"
+          "description": "We use high-quality materials that guarantee durability and long life of the floor covering. We provide:"
         },
         "right": {
           "tasks": [
@@ -202,7 +202,7 @@
             "Fast drying and the ability to step on it in a short time",
             "Proper preparation for all types of flooring – tiles, parquet, laminate, vinyl"
           ],
-          "text": "We use high-quality materials that guarantee durability and long life of the floor covering."
+          "text": "A strong and level floor base is the start of every good renovation."
         },
         "image": "/services-thermall.jpg"
       }
