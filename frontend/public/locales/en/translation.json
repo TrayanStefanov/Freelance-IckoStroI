@@ -48,28 +48,25 @@
       }
     },
     "issues": {
-      "title": "Why choose US?",
+      "title": "Why Choose US?",
       "factors": {
         "1": {
-          "title": "Time is money",
-          "text": "With us, renovations are done fast and hassle-free."
+          "title": "Your Time is Money",
+          "text": "We organize the entire process quickly and without unnecessary hassle."
         },
         "2": {
-          "title": "Quality is never an accident.",
-          "text": "It is the result of conscious effort."
+          "title": "Quality Without Compromise",
+          "text": "Durable, high-quality solutions with attention to every detail."
         },
         "3": {
-          "title": "Your property is losing value",
-          "text": "Neglected spaces lower your property's market value."
+          "title": "Integrity Without Exceptions",
+          "text": "We work precisely and keep every promise we make."
         },
         "4": {
-          "title": "You deserve comfort",
-          "text": "Your home or office should reflect your lifestyle and needs."
+          "title": "Deadlines and Availability",
+          "text": "Always on time and always available for you."
         }
       }
-    },
-    "team": {
-      "title": "Trust our team with your renovation project"
     }
   },
   "services": {
