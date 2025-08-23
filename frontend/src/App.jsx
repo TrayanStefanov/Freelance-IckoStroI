@@ -19,16 +19,18 @@ const App = () => {
       <Helmet>
 
       </Helmet>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-      <Footer />
+      <div className='flex flex-col justify-between'>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   )
 }
