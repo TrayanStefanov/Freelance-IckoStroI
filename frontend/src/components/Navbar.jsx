@@ -25,7 +25,7 @@ const Navbar = () => {
                     <img src={t("navbar.logo")} className="w-40 lg:w-64 ml-4" alt="" />
                 </Link>
             </div>
-            <div className="navbar-center hidden md:flex ml-[25%]">
+            <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center">
                     <li className="px-1 ps-4"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/")}`}  to='/'>{t("navbar.home")}</Link></li>
                     <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/about")}`} to='/about'>{t("navbar.about")}</Link></li>
@@ -35,7 +35,7 @@ const Navbar = () => {
                     <li className="px-1"><LanguageSelector /></li>
                 </ul>
             </div>
-            <div className="navbar-end w-auto">
+            <div className="navbar-end w-auto hover:bg-neutral hover:text-neutral-content border border-primary-content rounded-lg">
                 <div className="dropdown relative">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
                         <svg
@@ -53,12 +53,12 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu dropdown-content bg-secondary text-primary z-[1] absolute top-[110%] min-w-[100vw] lg:min-w-[25vw] right-[-8px] border border-l-0 border-r-0 border-primary">
-                        <li className="border-b border-primary mx-3"><Link to='/'>{t("navbar.home")}</Link></li>
-                        <li className="border-b border-primary mx-3"><Link to='/about'>{t("navbar.about")}</Link></li>
-                        <li className="border-b border-primary mx-3"><Link to='/projects'>{t("navbar.projects")}</Link></li>
-                        <li className="border-b border-primary mx-3"><Link to='/services'>{t("navbar.services")}</Link></li>
-                        <li className="border-b border-primary mx-3"><Link to='/contacts'>{t("navbar.contacts")}</Link></li>
+                        className="menu dropdown-content bg-secondary p-0 text-primary z-[1] absolute top-[110%] min-w-[100vw] lg:min-w-[25vw] right-[-8px] border border-l-0 border-r-0 border-primary">
+                        <li className="border-b border-primary px-3 hover:bg-neutral hover:text-neutral-content"><Link to='/'>{t("navbar.home")}</Link></li>
+                        <li className="border-b border-primary px-3 hover:bg-neutral hover:text-neutral-content"><Link to='/about'>{t("navbar.about")}</Link></li>
+                        <li className="border-b border-primary px-3 hover:bg-neutral hover:text-neutral-content"><Link to='/projects'>{t("navbar.projects")}</Link></li>
+                        <li className="border-b border-primary px-3 hover:bg-neutral hover:text-neutral-content"><Link to='/services'>{t("navbar.services")}</Link></li>
+                        <li className="border-b border-primary px-3 hover:bg-neutral hover:text-neutral-content"><Link to='/contacts'>{t("navbar.contacts")}</Link></li>
                         <li className="mt-2"><LanguageSelector /></li>
                     </ul>
                 </div>
