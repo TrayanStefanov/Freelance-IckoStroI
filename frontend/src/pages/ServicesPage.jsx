@@ -42,7 +42,7 @@ const Services = () => {
   if (!servicesList || !Array.isArray(servicesList)) return null;
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden font-bn">
       <div
         className="hero min-h-[80vh] bg-right md:bg-center"
         style={{ backgroundImage: "url(/services-hero.jpg)" }}
@@ -56,7 +56,7 @@ const Services = () => {
             <p className="mb-5 text-2xl md:text-3xl lg:text-4xl lg:px-20">
               {t("services.intro.text")}
             </p>
-            <p className="mb-5 text-3xl font-semibold">
+            <p className="mb-5 text-3xl md:text-4xl lg:text-5xl">
               {t("services.intro.text2")}
             </p>
           </div>
@@ -65,6 +65,9 @@ const Services = () => {
 
       <div className="lg:bg-radial-accent">
         {/* Desktop */}
+        <h2 className='text-4xl md:text-5xl lg:text-6xl text-primary p-4 text-center lg:mb-10'>
+          {t("services.listTitle")}
+        </h2>
         <div className="max-w-[80vw] mx-auto hidden md:block">
           <div className="container mx-auto px-4">
             {servicesList.map((service) => (
@@ -84,28 +87,30 @@ const Services = () => {
                   {/* Left trapezoid */}
                   <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
                     <motion.div
-                      className={`clip-trapezoid-left h-full w-full text-primary px-12 py-6 text-l flex flex-col items-start gap-3 bg-accent z-10`}
+                      className={`clip-trapezoid-left h-full w-full text-primary px-16 py-6 text-l flex flex-col items-start gap-3 bg-accent z-10 justify-between`}
                       variants={rubberBandSlideInFromLeft}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      <h3 className="font-bold text-xl">{service.left.title}</h3>
-                      <h3 className="italic indent-4">{service.right.text}</h3>
-                      <p>{service.left.description}</p>
+                      <div>
+                      <h3 className="font-bold text-xl lg:text-2xl">{service.left.title}</h3>
+                      <h3 className="italic indent-4 mt-4 text-lg lg:text-xl">{service.right.text}</h3>
+                      </div>
+                      <p className="text-xl">{service.left.description}</p>
                     </motion.div>
                   </div>
 
                   {/* Right trapezoid */}
                   <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
                     <motion.div
-                      className={`clip-trapezoid-right h-full w-full text-base-content ps-16 pe-4 py-6 text-md flex flex-col items-end gap-3 font-normal bg-white z-9 justify-end`}
+                      className={`clip-trapezoid-right h-full w-full text-base-content ps-20 pe-4 py-6 text-md flex flex-col items-end gap-3 font-normal bg-white z-9 place-content-center`}
                       variants={fadeIn}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      <ul className="list-disc ml-4">
+                      <ul className="list-disc ml-4 text-lg lg:text-xl">
                         {service.right.tasks.map((task, i) => (
                           <li key={i}>{task}</li>
                         ))}
@@ -123,9 +128,9 @@ const Services = () => {
           {servicesList.map((service, idx) => (
             <div
               key={idx}
-              className="collapse collapse-arrow join-item border-base-300 border border-l-0 border-r-0 bg-primary text-accent"
+              className="collapse collapse-arrow join-item border-base-300 border border-l-0 border-r-0 bg-  text-primary"
             >
-              <input type="radio" name="my-accordion-4" defaultChecked={idx === 0} />
+              <input type="checkbox"  />
               <div className="collapse-title text-xl font-medium flex items-center gap-3">
                 <img
                   src={service.image}
@@ -135,13 +140,17 @@ const Services = () => {
                 {service.left.title}
               </div>
               <div className="collapse-content">
-                <p>{service.left.description}</p>
-                <ul className="list-disc ml-4">
+                <img
+                  src={service.image}
+                  className="object-contain rounded-md mb-4"
+                />
+                <p className="indent-4 mb-4">{service.left.description}</p>
+                <ul className="list-disc ml-4 indent-4 list-inside">
                   {service.right.tasks.map((task, i) => (
                     <li key={i}>{task}</li>
                   ))}
                 </ul>
-                <p>{service.right.text}</p>
+                <p className="indent-4 mt-4">{service.right.text}</p>
               </div>
             </div>
           ))}
