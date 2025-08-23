@@ -34,7 +34,10 @@
     "more": "Learn more about our:",
     "btnprojects": "Projects",
     "btnservices": "Services",
-    "slogan": "Your home. Our commitment. Quality. Integrity. Reliability."
+    "slogan": "Your home. Our commitment.",
+    "bold1": "Quality",
+      "bold2": "Integrity",
+      "bold3": "Reliability"
   },
   "about": {
     "intro": {
@@ -212,7 +215,9 @@
     "title": "Contacts",
     "text": {
       "normal": "Get in touch and take the first step toward your renewed home – ",
-      "bold": "Quality. Integrity. Reliability."
+      "bold1": "Quality",
+      "bold2": "Integrity",
+      "bold3": "and Reliability"
     },
     "location": {
       "note": "Location:",
