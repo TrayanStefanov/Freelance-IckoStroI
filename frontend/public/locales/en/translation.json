@@ -14,12 +14,14 @@
     "contacts": "Contacts"
   },
   "footer": {
-    "phone": "+359 888 888888",
+    "phone": "+359 87 962 9072",
     "email": "example@example.eu",
-    "slogan": "Contact us - and we will renovate your place!",
+    "slogan": "Contact us - and we will gladly help you!",
     "social": "Socials",
     "social-links": {
-      "linkedin": "https://www.linkedin.com/"
+      "linkedin": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/"
     }
   },
   "language": {
@@ -32,7 +34,7 @@
     "more": "Learn more about our:",
     "btnprojects": "Projects",
     "btnservices": "Services",
-    "slogan": "Your home. Our commitment. Fast. Easy. High quality."
+    "slogan": "Your home. Our commitment. Quality. Integrity. Reliability."
   },
   "about": {
     "intro": {
@@ -75,6 +77,7 @@
       "text": "We offer flexible and high-quality solutions for home and office. From small improvements to complete renovations – we are with you every step of the way.",
       "text2": "Explore our services below."
     },
+    "listTitle": "What services do we offer:",
     "serviceList": [
       {
         "left": {
@@ -209,7 +212,7 @@
     "title": "Contacts",
     "text": {
       "normal": "Get in touch and take the first step toward your renewed home – ",
-      "bold": "fast, easy and high-quality."
+      "bold": "Quality. Integrity. Reliability."
     },
     "location": {
       "note": "Location:",
@@ -217,7 +220,7 @@
     },
     "phone": {
       "note": "Phone:",
-      "value": "+359 88 888 8888"
+      "value": "+359 87 962 9072"
     },
     "email": {
       "note": "Email:"
@@ -230,10 +233,18 @@
     "btn": "Go to HomePage"
   },
   "project": {
-    "title": "Complete Bathroom Renovation",
-    "tags": "Renovation, Interior, Plumbing, Tiling",
-    "description": "We completely transformed an outdated and worn-down bathroom into a modern, functional, and aesthetically clean space. The project involved full demolition, installation of new water and drainage systems, waterproofing, tiling with high-quality ceramic tiles, and fitting new sanitary fixtures including a walk-in shower with glass paneling. We also integrated LED lighting and a suspended ceiling to create a bright and relaxing environment. The client requested a minimalist style with matte black accents for a contemporary look. The entire renovation was completed within 10 working days, with minimal disruption to the household. This project is a perfect example of how thoughtful design and professional execution can breathe new life into any home.",
-    "time": "10 working days",
-    "image": "/project-bath.jpg"
+    "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
+    "tags": "Renovation, Painting, Interior, Mall",
+    "description": "We carried out a complete refresh of the interior spaces in a large shopping mall, focusing primarily on the ceilings and columns. The work included surface preparation through sanding and plastering, removal of old coatings, and application of high-quality, long-lasting paints. For the columns, we used wear-resistant coatings to ensure durability and easy maintenance, while the ceilings were painted with white dispersion paint to create a brighter and more spacious look. The project was completed within a short timeframe and with minimal disruption to the operation of the retail stores. The final result is a modern, clean, and fresh appearance that enhances the overall experience of visitors.",
+    "time": "7 working days",
+    "mainImage": "/projects/Mall_project/1.png",
+    "images": [
+      "/projects/Mall_project/1.png",
+      "/projects/Mall_project/2.png",
+      "/projects/Mall_project/3.png",
+      "/projects/Mall_project/4.png",
+      "/projects/Mall_project/5.png",
+      "/projects/Mall_project/6.png"
+    ]
   }
 }
