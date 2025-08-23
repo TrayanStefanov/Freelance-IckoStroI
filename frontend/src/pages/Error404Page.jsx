@@ -7,7 +7,7 @@ const Error404 = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6 text-center font-bn">
       <FiAlertCircle className="text-red-600 text-6xl mb-6" />
       <h1 className="text-7xl font-bold mb-4">{t("404page.title")}</h1>
       <h2 className="text-3xl font-semibold mb-2">{t("404page.subtitle")}</h2>

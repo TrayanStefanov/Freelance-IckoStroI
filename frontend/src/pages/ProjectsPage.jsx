@@ -11,7 +11,7 @@ const ProjectsPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto lg:pt-[15vh] pb-10">
+    <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto lg:pt-[15vh] pb-10 font-bn">
       {/* Main image */}
       <img
         src={projectimg}
