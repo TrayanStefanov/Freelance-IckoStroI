@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { TbBrandTwitter, TbBrandLinkedin, TbBrandFacebook } from "react-icons/tb";
+import { TbBrandLinkedin, TbBrandFacebook, TbBrandInstagram } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -19,17 +19,17 @@ const Footer = () => {
                     </Link>
                 </aside>
                 <aside className="self-center">
-                    <h6 className="footer-title">{t("footer.social")}</h6>
+                    <h6 className="footer-title text-neutral">{t("footer.social")}</h6>
                     <div className="grid grid-flow-col gap-4">
-                        <a className="md:text-3xl lg:text-5xl text-bold"><TbBrandFacebook /></a>
-                        <a href={t("footer.social-links.linkedin")} className="md:text-3xl lg:text-5xl text-bold"><TbBrandLinkedin /></a>
-                        <a className="md:text-3xl lg:text-5xl text-bold"><TbBrandTwitter /></a>
+                        <a href={t("footer.social-links.linkedin")} className="md:text-3xl lg:text-5xl text-bold text-neutral"><TbBrandLinkedin /></a>
+                        <a href={t("footer.social-links.facebook")} className="md:text-3xl lg:text-5xl text-bold text-neutral"><TbBrandFacebook /></a>
+                        <a href={t("footer.social-links.instagram")} className="md:text-3xl lg:text-5xl text-bold text-neutral"><TbBrandInstagram /></a>
                     </div>
                 </aside>
             </div>
             <aside className="self-center">
-                <p className="flex flex-row text-center items-center md:text-l lg:text-2xl indent-2"><FiPhoneCall />{t("footer.phone")}</p>
-                <p className="flex flex-row text-center items-center md:text-l lg:text-2xl indent-2"><FiMail />
+                <p className="flex flex-row text-center items-center md:text-l lg:text-2xl indent-2"><FiPhoneCall className="text-neutral"/>{t("footer.phone")}</p>
+                <p className="flex flex-row text-center items-center md:text-l lg:text-2xl indent-2"><FiMail className="text-neutral"/>
                     <a href={`mailto:${email}`} className="underline">
                         {email}
                     </a>
