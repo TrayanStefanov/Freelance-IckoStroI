@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'radial-accent': 'radial-gradient(circle, #ee9707, #ffffff 90%)',
+        'radial-accent': 'radial-gradient(circle, #0099cb, #ffffff 90%)',
         'linear-accent-right': 'linear-gradient(to right, #ee9707 40%, #ffffff 60%)',
         'linear-accent-left': 'linear-gradient(to left, #ffffff 40%, #ee9707  60%)',
       },
@@ -24,13 +24,13 @@ export default {
       {
         mytheme: {
           "primary": "#000000",
-          "primary-content": "#d6ce36",
+          "primary-content": "#0099cb",
           "secondary": "#ffffff",
           "secondary-content": "#000000",
-          "accent": "#ee9707",
-          "accent-content": "#000000",
-          "neutral": "#DEE4CE",
-          "neutral-content": "#12120f",
+          "accent": "#1fc7ff",
+          "accent-content": "#4a4546",
+          "neutral": "#004d66",
+          "neutral-content": "#ffffff",
           "base-100": "#FFFFFF",
           "base-200": "#dedede",
           "base-300": "#bebebe",
@@ -42,7 +42,7 @@ export default {
           "warning": "#00ff00",
           "warning-content": "#001600",
           "error": "#dc0b0b",
-          "error-content": "#d6ce36",
+          "error-content": "#ffd8d1",
         },
       },
     ],
