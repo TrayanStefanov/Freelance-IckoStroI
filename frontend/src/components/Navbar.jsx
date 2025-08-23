@@ -25,13 +25,13 @@ const Navbar = () => {
                     <img src={t("navbar.logo")} className="w-40 lg:w-64 ml-4" alt="" />
                 </Link>
             </div>
-            <div className="navbar-center hidden md:flex">
+            <div className="navbar-center hidden md:flex ml-[25%]">
                 <ul className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center">
-                    <li className="px-1 ps-4"><Link className={`px-2 py-1 ${isActive("/")}`}  to='/'>{t("navbar.home")}</Link></li>
-                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/about")}`} to='/about'>{t("navbar.about")}</Link></li>
-                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/projects")}`} to='/projects'>{t("navbar.projects")}</Link></li>
-                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/services")}`} to='/services'>{t("navbar.services")}</Link></li>
-                    <li className="px-1"><Link className={`px-2 py-1 ${isActive("/contacts")}`} to='/contacts'>{t("navbar.contacts")}</Link></li>
+                    <li className="px-1 ps-4"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/")}`}  to='/'>{t("navbar.home")}</Link></li>
+                    <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/about")}`} to='/about'>{t("navbar.about")}</Link></li>
+                    <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/projects")}`} to='/projects'>{t("navbar.projects")}</Link></li>
+                    <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/services")}`} to='/services'>{t("navbar.services")}</Link></li>
+                    <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/contacts")}`} to='/contacts'>{t("navbar.contacts")}</Link></li>
                     <li className="px-1"><LanguageSelector /></li>
                 </ul>
             </div>
