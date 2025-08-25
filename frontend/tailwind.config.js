@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'radial-accent': 'radial-gradient(circle, #0099cb, #ffffff 90%)',
+        'linear-accent': 'linear-gradient(to right, #ffffff, #e7e8f6, #c9d3ee, #a5c0e6, #79afdc, #79afdc, #79afdc, #79afdc, #a5c0e6, #c9d3ee, #e7e8f6, #ffffff)',
+        'radial-accent': 'radial-gradient(circle, #0099cb, #ffffff 20%)',
         'linear-accent-right': 'linear-gradient(to right, #ee9707 40%, #ffffff 60%)',
         'linear-accent-left': 'linear-gradient(to left, #ffffff 40%, #ee9707  60%)',
       },

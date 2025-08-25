@@ -63,15 +63,15 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="lg:bg-radial-accent">
+      <div className="lg:bg-linear-accent">
         {/* Desktop */}
-        <h2 className='text-4xl md:text-5xl lg:text-6xl text-primary p-4 text-center lg:mb-10'>
+        <h2 className='text-4xl md:text-5xl lg:text-6xl text-primary p-4 text-center lg:mb-4'>
           {t("services.listTitle")}
         </h2>
-        <div className="max-w-[80vw] mx-auto hidden md:block">
+        <div className="xl:max-w-[80vw] mx-auto hidden lg:block">
           <div className="container mx-auto px-4">
             {servicesList.map((service) => (
-              <div className="relative w-full mb-6 min-h-[30vh]">
+              <div className="relative w-full mt-6 min-h-[30vh]">
                 {/* Background image layer */}
                 <motion.div
                   className="absolute inset-0 bg-center bg-contain bg-no-repeat z-0 scale-100"
@@ -87,17 +87,17 @@ const Services = () => {
                   {/* Left trapezoid */}
                   <div className="relative w-full md:w-1/2 lg:w-[40%] flex">
                     <motion.div
-                      className={`clip-trapezoid-left h-full w-full text-primary px-16 py-6 text-l flex flex-col items-start gap-3 bg-accent z-10 justify-between`}
+                      className={`clip-trapezoid-left h-full w-full text-primary px-16 py-6 text-l flex flex-col items-start gap-3 bg-info z-10 justify-evenly`}
                       variants={rubberBandSlideInFromLeft}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.3 }}
                     >
                       <div>
-                      <h3 className="font-bold text-xl lg:text-2xl">{service.left.title}</h3>
-                      <h3 className="italic indent-4 mt-4 text-lg lg:text-xl">{service.right.text}</h3>
+                      <h3 className="font-bold text-lg xl:text-2xl">{service.left.title}</h3>
+                      <h3 className="italic indent-4 mt-4 text-md xl:text-xl">{service.right.text}</h3>
                       </div>
-                      <p className="text-xl">{service.left.description}</p>
+                      <p className="text-md xl:text-xl">{service.left.description}</p>
                     </motion.div>
                   </div>
 
@@ -110,7 +110,7 @@ const Services = () => {
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      <ul className="list-disc ml-4 text-lg lg:text-xl">
+                      <ul className="list-disc ml-4 text-md xl:text-xl">
                         {service.right.tasks.map((task, i) => (
                           <li key={i}>{task}</li>
                         ))}
@@ -124,7 +124,7 @@ const Services = () => {
         </div>
 
         {/* Mobile Accordion */}
-        <div className="mx-auto block md:hidden join join-vertical w-full rounded-none">
+        <div className="mx-auto block lg:hidden join join-vertical w-full rounded-none">
           {servicesList.map((service, idx) => (
             <div
               key={idx}
