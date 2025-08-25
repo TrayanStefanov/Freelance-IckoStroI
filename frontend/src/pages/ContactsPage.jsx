@@ -42,7 +42,7 @@ const Contacts = () => {
           </div>
 
           {/* RIGHT SIDE: Google Map */}
-          <div className="lg:w-1/2 w-full h-[300px] lg:h-auto mx-10">
+          <div className="lg:w-1/2 w-full h-[300px] lg:h-auto lg:mx-10">
             <iframe
               title="Business area"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93836.37935954207!2d23.241546740875236!3d42.69552878928868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia!5e0!3m2!1sen!2sbg!4v1755696992586!5m2!1sen!2sbg"
