@@ -10,15 +10,18 @@ const Contacts = () => {
   const emailDomain = "example.eu";
   const email = `${emailUser}@${emailDomain}`;
 
+  // Detect screen size
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+
   // Variants
-  const heroTextVariants = {
-    hidden: { opacity: 0, x: -50 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  const heroVariants = {
+    hidden: { opacity: 0, y: isDesktop ? 0 : 40, x: isDesktop ? -50 : 0 },
+    show: { opacity: 1, y: 0, x: 0, transition: { duration: 0.8 } },
   };
 
   const mapVariants = {
-    hidden: { opacity: 0, x: 50, scale: 0.70 },
-    show: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, scale: isDesktop ? 0.95 : 0.9 },
+    show: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
   };
 
   const listVariants = {
@@ -34,10 +37,10 @@ const Contacts = () => {
     <div className="overflow-hidden pt-[15vh] min-h-[80vh] font-bn text-primary">
       <div className="flex flex-col lg:flex-row bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
 
-        {/* LEFT SIDE: Contact details */}
+        {/* Contact details */}
         <motion.div
           className="min-h-[40vh] lg:w-1/2 text-center flex flex-col justify-center items-center p-6"
-          variants={heroTextVariants}
+          variants={heroVariants}
           initial="hidden"
           animate="show"
         >
@@ -47,39 +50,27 @@ const Contacts = () => {
             {t("contacts.text.bold1")}, {t("contacts.text.bold2")} {t("contacts.text.bold3")}
           </b>
 
-          {/* Phone / Email */}
           <motion.div
             className="flex flex-col gap-6 w-full max-w-lg"
             variants={listVariants}
             initial="hidden"
             animate="show"
           >
-            <motion.h2
-              className="text-lg lg:text-2xl flex items-center justify-center"
-              variants={itemVariants}
-            >
-              <FiPhoneCall className="mx-2 text-accent transition-transform hover:text-neutral hover:scale-150" />
+            <motion.h2 className="text-lg lg:text-2xl flex items-center justify-center" variants={itemVariants}>
+              <FiPhoneCall className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.phone.note")}</b>
               {t("contacts.phone.value")}
             </motion.h2>
 
-            <motion.h2
-              className="text-lg lg:text-2xl flex items-center justify-center"
-              variants={itemVariants}
-            >
-              <FiMail className="mx-2 text-accent transition-transform hover:text-neutral hover:scale-150" />
+            <motion.h2 className="text-lg lg:text-2xl flex items-center justify-center" variants={itemVariants}>
+              <FiMail className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.email.note")}</b>
-              <a
-                href={`mailto:${email}`}
-                className="hover:underline break-all"
-              >
-                {email}
-              </a>
+              <a href={`mailto:${email}`} className="hover:underline break-all">{email}</a>
             </motion.h2>
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE: Google Map */}
+        {/* Map */}
         <motion.div
           className="lg:w-1/2 w-full h-[300px] lg:h-auto lg:mx-10 mt-6 lg:mt-0"
           variants={mapVariants}
@@ -95,7 +86,7 @@ const Contacts = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </motion.div>
       </div>
     </div>
