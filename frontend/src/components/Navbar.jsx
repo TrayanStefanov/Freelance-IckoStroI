@@ -8,16 +8,24 @@ const Navbar = () => {
     const { t } = useTranslation();
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setIsOpen(false); // close dropdown when route changes
+        setIsOpen(false);
     }, [location.pathname]);
 
-    const isActive = (path) =>
-        location.pathname === path ? "text-accent font-bold" : "";
+    useEffect(() => {
+        const handleScroll = () => setScrollY(window.scrollY);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-    // Variants for staggered animation
+    const isActive = (path) =>
+        location.pathname === path ? "text-accent font-bold relative" : "relative";
+
+    // Variants for staggered menu items
+
     const menuVariants = {
         hidden: { opacity: 0, y: -20 },
         show: {
@@ -36,24 +44,92 @@ const Navbar = () => {
         show: { opacity: 1, y: 0 },
     };
 
+    // Variants for staggered mobile nav items
+    const mobileListVariants = {
+        hidden: {},
+        show: { transition: { staggerChildren: 0.15 } },
+    };
+
+    const mobileItemVariants = {
+        hidden: { opacity: 0, y: -10 },
+        show: { opacity: 1, y: 0 },
+    };
+
     return (
-        <div className="navbar bg-secondary z-50 shadow-md border-b-2 border-primary fixed justify-between">
-            <div className="navbar-start aspect-[3/1] md:max-w-[180px] lg:max-w-[240px] min-w-[120px]">
-                <Link to='/'>
-                    <img src={t("navbar.logo")} className="w-40 lg:w-64 ml-4" alt="" />
-                </Link>
-            </div>
-            <div className="navbar-end w-[70vw]">
-                {/* Desktop menu */}
-                <div className="hidden md:flex xl:me-20 2xl:me-40">
-                    <ul className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center">
-                        <li className="px-1 ps-4"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/")}`} to='/'>{t("navbar.home")}</Link></li>
-                        <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/about")}`} to='/about'>{t("navbar.about")}</Link></li>
-                        <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/projects")}`} to='/projects'>{t("navbar.projects")}</Link></li>
-                        <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/services")}`} to='/services'>{t("navbar.services")}</Link></li>
-                        <li className="px-1"><Link className={`hover:bg-neutral hover:text-neutral-content px-2 py-1 ${isActive("/contacts")}`} to='/contacts'>{t("navbar.contacts")}</Link></li>
-                        <li className="px-1"><LanguageSelector /></li>
-                    </ul>
+        <motion.div
+            initial={{ y: -80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 120, damping: 18 }}
+            className="fixed top-0 left-0 w-full z-50 shadow-md border-b-2 border-primary"
+        >
+            <motion.div
+                animate={{
+                    backgroundColor: scrollY > 50 ? "rgba(245,245,245,1)" : "rgba(245,245,245,0.8)",
+                    backdropFilter: scrollY > 50 ? "blur(8px)" : "blur(0px)",
+                }}
+                transition={{ duration: 0.3 }}
+                className="navbar justify-between bg-secondary/80"
+            >
+                {/* Logo with build-up animation */}
+                <div className="navbar-start aspect-[3/1] md:max-w-[180px] lg:max-w-[240px] min-w-[120px]">
+                    <Link to='/'>
+                        <motion.img
+                            src={t("navbar.logo")}
+                            alt="logo"
+                            className="w-40 lg:w-64 ml-4"
+                            initial={{ opacity: 0, y: 20, scale: 0.7 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ type: "spring", stiffness: 120, damping: 12 }}
+                        />
+                    </Link>
+                </div>
+
+                {/* Desktop Nav Links */}
+                <div className="navbar-end w-[70vw] hidden md:flex xl:me-20 2xl:me-40">
+                    <motion.ul
+                        className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center relative"
+                        initial="hidden"
+                        animate="show"
+                        variants={mobileListVariants}
+                    >
+                        {[
+                            { path: "/", label: t("navbar.home") },
+                            { path: "/about", label: t("navbar.about") },
+                            { path: "/projects", label: t("navbar.projects") },
+                            { path: "/services", label: t("navbar.services") },
+                            { path: "/contacts", label: t("navbar.contacts") },
+                        ].map(({ path, label }) => (
+                            <motion.li
+                                key={path}
+                                variants={mobileItemVariants}
+                                className="px-1 relative group"
+                            >
+                                <Link
+                                    to={path}
+                                    className={`hover:text-accent px-2 py-1 transition-colors ${isActive(path)}`}
+                                >
+                                    {label}
+                                    {/* Active/hover underline */}
+                                    <motion.span
+                                        layoutId="underline"
+                                        className="absolute left-0 bottom-0 h-[2px] bg-accent"
+                                        initial={{ width: 0 }}
+                                        animate={{
+                                            width:
+                                                location.pathname === path
+                                                    ? "100%"
+                                                    : "0%",
+                                        }}
+                                        whileHover={{ width: "100%" }}
+                                        transition={{ duration: 0.3 }}
+                                    />
+                                </Link>
+                            </motion.li>
+                        ))}
+                        <motion.li variants={mobileItemVariants} className="px-1 mx-2">
+                            <LanguageSelector />
+                        </motion.li>
+                    </motion.ul>
                 </div>
 
                 {/* Mobile burger */}
@@ -61,8 +137,11 @@ const Navbar = () => {
                     <button
                         className="relative z-50 p-2 border border-primary-content rounded-lg"
                         onClick={() => setIsOpen(!isOpen)}
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isOpen}
+                        aria-controls="mobile-menu"
                     >
-                        {/* Morphing burger icon -> X */}
+                        {/* Morphing burger -> X */}
                         <motion.svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6 text-primary"
@@ -116,6 +195,7 @@ const Navbar = () => {
 
                                 {/* Dropdown menu */}
                                 <motion.ul
+                                    id="mobile-menu"
                                     initial="hidden"
                                     animate="show"
                                     exit="exit"
@@ -145,8 +225,8 @@ const Navbar = () => {
                         )}
                     </AnimatePresence>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 
