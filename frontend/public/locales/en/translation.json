@@ -47,9 +47,11 @@
         "2": "We work with both individuals and businesses alike, offering a full range of services for apartments, houses, and commercial properties."
       },
       "subtitle": "What differentiates us?",
-      "text": {
+      "points": {
         "1": "In a world where 'renovation' is often associated with delays, compromises, and unnecessary stress - we choose a different path.",
-        "2": "With us, you'll find a team that works with responsibility, dedication, and a personal approach. We don't make promises we can't keep. We value clear communication, honesty, and the highest quality in every service we provide."
+        "2": "A find a team that works with responsibility, dedication, and a personal approach.",
+        "3": "We don't make promises we can't keep.",
+        "4": "We value clear communication, honesty, and the highest quality in every service we provide."
       }
     },
     "issues": {
