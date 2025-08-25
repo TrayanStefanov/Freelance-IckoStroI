@@ -95,7 +95,7 @@ const Services = () => {
                     >
                       <div>
                       <h3 className="font-bold text-lg xl:text-2xl">{service.left.title}</h3>
-                      <h3 className="italic indent-4 mt-4 text-md xl:text-xl">{service.right.text}</h3>
+                      <h3 className="italic indent-4 mt-4 text-md xl:text-xl">{service.left.text}</h3>
                       </div>
                       <p className="text-md xl:text-xl">{service.left.description}</p>
                     </motion.div>
