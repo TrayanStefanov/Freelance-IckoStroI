@@ -18,6 +18,21 @@ const Home = () => {
     hover: { scale: 1.05, y: -3, transition: { type: "spring", stiffness: 300, damping: 15 } },
   };
 
+  // Slogan animation
+  const sloganVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  };
+
+  // Brick section variants (slower)
+  const brickContainer = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.4 } } // slowed down from 0.2
+  };
+  const brickVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 1 } } // slower animation
+  };
 
   return (
     <div className="font-bn">
@@ -123,25 +138,34 @@ const Home = () => {
       </div>
 
       {/* Slogan Section */}
-      <div
-        className='text-center text-3xl sm:text-4xl text-neutral py-8 italic px-4'>
+      <motion.div
+        className='text-center text-3xl sm:text-4xl text-neutral py-8 italic px-4'
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sloganVariants}
+      >
         {t("home.slogan")}
-      </div>
+      </motion.div>
 
       {/*Brick Section */}
-      <div
+      <motion.div
         className='flex flex-col md:flex-row justify-center items-center text-3xl sm:text-4xl text-neutral gap-6 md:gap-12 px-4 md:px-0 pb-12'
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={brickContainer}
       >
-        <div className='flex items-center gap-4'>
+        <motion.div className='flex items-center gap-4' variants={brickVariants}>
           <BsBricks /> {t("home.bold1")} <BsBricks />
-        </div>
-        <div className='flex items-center gap-4'>
+        </motion.div>
+        <motion.div className='flex items-center gap-4' variants={brickVariants}>
           <BsBricks /> {t("home.bold2")} <BsBricks />
-        </div>
-        <div className='flex items-center gap-4'>
+        </motion.div>
+        <motion.div className='flex items-center gap-4' variants={brickVariants}>
           <BsBricks /> {t("home.bold3")} <BsBricks />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
