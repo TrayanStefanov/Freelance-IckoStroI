@@ -31,7 +31,18 @@ const Home = () => {
         </div>
       </div>
       <div className='text-center min-h-100 text-3xl lg:text-4xl text-neutral pt-8 pb-4 italic'>{t("home.slogan")}</div>
-      <div className='flex text-center min-h-100 text-3xl lg:text-4xl text-neutral pb-8 pt-4 italic flex-row justify-center items-center'>{t("home.bold1")} <BsBricks className='mx-5'/> {t("home.bold2")} <BsBricks className='mx-5'/> {t("home.bold3")}</div>
+      <div className='hidden md:flex flex-row text-center min-h-100 text-3xl lg:text-4xl text-neutral pb-8 pt-4 italic justify-center items-center'><BsBricks className='mx-5' /> {t("home.bold1")} <BsBricks className='mx-5' /> {t("home.bold2")} <BsBricks className='mx-5' /> {t("home.bold3")} <BsBricks className='mx-5' /></div>
+      <div className='flex flex-col md:hidden text-center min-h-100 text-3xl lg:text-4xl text-neutral pb-8 pt-4 italic justify-center items-center'>
+        <div className='flex flex-row'>
+          <BsBricks className='mx-5' /> {t("home.bold1")} <BsBricks className='mx-5' />
+        </div>
+        <div className='flex flex-row'>
+          <BsBricks className='mx-5' /> {t("home.bold2")} <BsBricks className='mx-5' />
+        </div>
+        <div className='flex flex-row'>
+          <BsBricks className='mx-5' /> {t("home.bold3")} <BsBricks className='mx-5' />
+        </div>
+      </div>
     </div>
   )
 }
