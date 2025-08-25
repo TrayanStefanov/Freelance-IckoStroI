@@ -16,7 +16,7 @@
   "footer": {
     "phone": "+359 87 962 9072",
     "email": "example@example.eu",
-    "slogan": "Contact us - and we will gladly help you!",
+    "slogan": "Contact us - and your home will thank you!",
     "social": "Socials",
     "social-links": {
       "linkedin": "https://www.linkedin.com/",
@@ -30,14 +30,14 @@
   },
   "home": {
     "title": "Who Are We?",
-    "subtitle": "Itskov Stroy is a renovation and remodeling company with a clear focus: fast, easy, and high-quality execution of your construction projects – from small improvements to complete transformations.",
+    "subtitle": "Itskov Stroy is a renovation and remodeling company with a clear focus: professional and high-quality execution of your construction projects - from small improvements to complete transformations.",
     "more": "Learn more about our:",
     "btnprojects": "Projects",
     "btnservices": "Services",
     "slogan": "Your home. Our commitment.",
-    "bold1": "Quality",
-      "bold2": "Integrity",
-      "bold3": "Reliability"
+    "bold1": "Trust",
+      "bold2": "Quality",
+      "bold3": "Professionalism"
   },
   "about": {
     "intro": {
@@ -48,7 +48,7 @@
       },
       "subtitle": "What differentiates us?",
       "text": {
-        "1": "In a world where 'renovation' is often associated with delays, compromises, and unnecessary stress – we choose a different path.",
+        "1": "In a world where 'renovation' is often associated with delays, compromises, and unnecessary stress - we choose a different path.",
         "2": "With us, you'll find a team that works with responsibility, dedication, and a personal approach. We don't make promises we can't keep. We value clear communication, honesty, and the highest quality in every service we provide."
       }
     },
@@ -77,7 +77,7 @@
   "services": {
     "intro": {
       "title": "Our Services",
-      "text": "We offer flexible and high-quality solutions for home and office. From small improvements to complete renovations – we are with you every step of the way.",
+      "text": "We offer flexible and high-quality solutions for home and office. From small improvements to complete renovations - we are with you every step of the way.",
       "text2": "Explore our services below."
     },
     "listTitle": "What services do we offer:",
@@ -85,16 +85,16 @@
       {
         "left": {
           "title": "Complete and Partial Interior Renovations",
-          "description": "If you need a total renovation – without searching for separate contractors for every task – we are here. And we offer:"
+          "description": "If you need a total renovation - without searching for separate contractors for every task - we are here. And we offer:"
         },
         "right": {
           "tasks": [
-            "Full renovation from A to Z – planning, execution, finishing details",
-            "One organization, one team – saving you time and stress",
+            "Full renovation from A to Z - planning, execution, finishing details",
+            "One organization, one team - saving you time and stress",
             "Regular communication and reliability throughout the process",
             "Completion on time and according to agreed parameters"
           ],
-          "text": "You relax – we take care of everything else."
+          "text": "You relax - we take care of everything else."
         },
         "image": "/services-complete.jpg"
       },
@@ -110,7 +110,7 @@
             "Installation of concealed wiring with PVC channels or conduits",
             "Diagnostics and troubleshooting"
           ],
-          "text": "Safety, functionality, and good aesthetics – that’s our standard."
+          "text": "Safety, functionality, and good aesthetics - that's our standard."
         },
         "image": "/services-electrical.jpg"
       },
@@ -125,7 +125,7 @@
             "Installation of sinks, boilers, toilets, shower cabins, and more",
             "Work with polypropylene, copper, and PVC pipes"
           ],
-          "text": "Plumbing should be done once – but done right."
+          "text": "Plumbing should be done once - but done right."
         },
         "image": "/services-bathroom.jpg"
       },
@@ -152,26 +152,26 @@
         },
         "right": {
           "tasks": [
-            "Installation of floor and wall tiles – bathroom, kitchen, hallway, terrace",
+            "Installation of floor and wall tiles - bathroom, kitchen, hallway, terrace",
             "Precise leveling and consistent grouting",
             "Work with faience, terracotta, granite and mosaic tiles",
             "Proper finishing of corners, trims, and transitions"
           ],
-          "text": "Tiles are not just cladding – they create style and comfort."
+          "text": "Tiles are not just cladding - they create style and comfort."
         },
         "image": "/services-floor-laminate.jpg"
       },
       {
         "left": {
           "title": "Painting",
-          "description": "We work fast and clean, so painting doesn’t turn into a nightmare, but a pleasure. We offer:"
+          "description": "We work fast and clean, so painting doesn't turn into a nightmare, but a pleasure. We offer:"
         },
         "right": {
           "tasks": [
             "Interior painting with latex, oil-based paint, decorative effects",
             "Consultation on colors and combinations",
-            "Surface preparation (priming, plastering if needed)",
-            "Clean and precise work – no drips or stains"
+            "Surface preparation - priming, plastering if needed",
+            "Clean and precise work - no drips or stains"
           ],
           "text": "With a new color, your home literally comes to life again."
         },
@@ -184,7 +184,7 @@
         },
         "right": {
           "tasks": [
-            "Cement, gypsum, and fine plaster – depending on the wall type",
+            "Cement, gypsum, and fine plaster - depending on the wall type",
             "Leveling and smoothing surfaces",
             "Preparation for painting or wallpapering",
             "Repair of cracks, uneven areas, and other defects"
@@ -200,10 +200,10 @@
         },
         "right": {
           "tasks": [
-            "Machine and manual screed – depending on the room type and requirements",
+            "Machine and manual screed - depending on the room type and requirements",
             "Precise floor leveling",
             "Fast drying and the ability to step on it in a short time",
-            "Proper preparation for all types of flooring – tiles, parquet, laminate, vinyl"
+            "Proper preparation for all types of flooring - tiles, parquet, laminate, vinyl"
           ],
           "text": "A strong and level floor base is the start of every good renovation."
         },
@@ -214,10 +214,10 @@
   "contacts": {
     "title": "Contacts",
     "text": {
-      "normal": "Get in touch and take the first step toward your renewed home – ",
-      "bold1": "Quality",
-      "bold2": "Integrity",
-      "bold3": "and Reliability"
+      "normal": "Get in touch and take the first step toward your renewed home - ",
+      "bold1": "Trust",
+      "bold2": "Quality",
+      "bold3": "and Professionalism."
     },
     "location": {
       "note": "Location:",
@@ -234,14 +234,14 @@
   "404page": {
     "title": "404",
     "subtitle": "Page not found",
-    "text": "Sorry, the page you are looking for doesn’t exist or has been moved. Please use the navigation above to find what you are looking for.",
+    "text": "Sorry, the page you are looking for doesn't exist or has been moved. Please use the navigation above to find what you are looking for.",
     "btn": "Go to HomePage"
   },
   "project": {
     "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
     "tags": "Renovation, Painting, Interior, Mall",
     "description": "We carried out a complete refresh of the interior spaces in a large shopping mall, focusing primarily on the ceilings and columns. The work included surface preparation through sanding and plastering, removal of old coatings, and application of high-quality, long-lasting paints. For the columns, we used wear-resistant coatings to ensure durability and easy maintenance, while the ceilings were painted with white dispersion paint to create a brighter and more spacious look. The project was completed within a short timeframe and with minimal disruption to the operation of the retail stores. The final result is a modern, clean, and fresh appearance that enhances the overall experience of visitors.",
-    "time": "7 working days",
+    "time": " - 7 working days",
     "mainImage": "/projects/Mall_project/1.png",
     "images": [
       "/projects/Mall_project/1.png",
