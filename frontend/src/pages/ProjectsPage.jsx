@@ -19,13 +19,13 @@ const ProjectsPage = () => {
         className="w-[98vw] lg:w-[70vw] h-[40vh] lg:h-[60vh] object-cover rounded-lg mb-10 justify-self-center"
       />
 
-      <h1 className="text-5xl font-semibold my-10 mx-6 text-center">
+      <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center">
         {t("project.title")}
       </h1>
-      <h2 className="text-2xl mb-4 indent-4 italic mx-6">
+      <h2 className="text-2xl lg:text-3xl mb-4 indent-4 italic mx-6">
         {t("project.tags")} - {t("project.time")}
       </h2>
-      <p className="text-lg leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-accent border-2 rounded-lg">
+      <p className="text-lg lg:text-2xl leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-accent border-2 rounded-lg">
         {t("project.description")}
       </p>
 
