@@ -74,7 +74,7 @@ const Navbar = () => {
                 <div className="navbar-start aspect-[3/1] md:max-w-[180px] lg:max-w-[240px] min-w-[120px]">
                     <Link to='/'>
                         <motion.img
-                            src={t("navbar.logo")}
+                            src={t("navbar.logo") || "./logo_bg.png"}
                             alt="logo"
                             className="w-40 lg:w-64 ml-4"
                             initial={{ opacity: 0, y: 20, scale: 0.7 }}
