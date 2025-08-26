@@ -52,7 +52,7 @@ const AboutUs = () => {
           <ul className="space-y-2">
             {[t("about.intro.points.1"), t("about.intro.points.2"), t("about.intro.points.3"), t("about.intro.points.4")].map((point, idx) => (
               <li key={idx} className="flex items-center gap-2">
-                <GiCheckMark className="text-accent text-xl min-h-5 min-w-5" />
+                <GiCheckMark className="text-accent text-xl min-h-5 min-w-5 transition-colors hover:text-neutral hover:scale-120" />
                 <span>{point}</span>
               </li>
             ))}
@@ -61,7 +61,7 @@ const AboutUs = () => {
       </div>
 
       {/* Issues Section */}
-      <div className="mt-20">
+      <div className="mt-24">
         <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mb-12">
           {t("about.issues.title")}
         </h2>
@@ -70,14 +70,14 @@ const AboutUs = () => {
           {factors.map((factor, idx) => (
             <motion.div
               key={idx}
-              className="p-6 border-4 border-neutral rounded-2xl bg-secondary shadow hover:shadow-xl transition-transform hover:-translate-y-2"
+              className="p-6 border-4 border-neutral rounded-2xl bg-secondary shadow hover:shadow-xl transition-transform hover:-translate-y-2 hover:border-accent/90"
               custom={idx}
               variants={isDesktop ? cardDesktopVariants : cardMobileVariants}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
             >
-              <h6 className="text-xl lg:text-2xl font-bold mb-3 underline underline-offset-8 decoration-primary-content text-neutral">
+              <h6 className="text-xl lg:text-2xl font-bold mb-3 underline underline-offset-8 decoration-primary-content text-neutral drop-shadow-sm">
                 {factor.title}
               </h6>
               <p className="text-base">{factor.text}</p>
