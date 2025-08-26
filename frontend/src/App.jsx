@@ -6,7 +6,6 @@ import Home from "./pages/HomePage.jsx"
 import Projects from "./pages/ProjectsPage.jsx"
 import Contacts from "./pages/ContactsPage.jsx"
 import Services from "./pages/ServicesPage.jsx"
-import AboutUs from "./pages/AboutUsPage.jsx"
 import Error404 from "./pages/Error404Page.jsx"
 
 import Navbar from "./components/Navbar.jsx"
@@ -26,7 +25,6 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<AboutUs />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />

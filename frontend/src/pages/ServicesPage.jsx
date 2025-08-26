@@ -111,7 +111,7 @@ const Services = () => {
               <div className="relative w-full mt-6 min-h-[30vh]">
                 {/* Background image layer */}
                 <motion.div
-                  className="absolute inset-0 bg-center bg-contain bg-no-repeat z-0 scale-100"
+                  className="absolute inset-0 bg-center bg-contain bg-repeat z-0 scale-100"
                   style={{ backgroundImage: `url(${service.image || "/services-hero.jpg"})` }}
                   variants={bgFadeIn}
                   initial="hidden"
