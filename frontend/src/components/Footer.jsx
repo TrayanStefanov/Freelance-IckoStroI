@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { TbBrandLinkedin, TbBrandFacebook, TbBrandInstagram } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -10,15 +11,16 @@ const Footer = () => {
     const email = `${emailUser}@${emailDomain}`;
 
     const location = useLocation();
-    const contactsStyle = location.pathname === "/contacts" ? "fixed bottom-0 left-0" : "";
+    const isMobile = useMediaQuery("(max-width: 767px)");
+    const contactsStyle = location.pathname === "/contacts" && !isMobile ? "fixed bottom-0 left-0" : "";
 
     return (
         <div>
             <footer className={`footer bg-secondary text-primary justify-around border-t-2 border-primary block ${contactsStyle}`}>
-                <div className="flex flex-row justify-between w-full px-4 my-4">
+                <div className="flex flex-row justify-between w-full px-2 md:px-4 mt-4">
                     <div className="aspect-[3/1] md:max-w-[240px] lg:max-w-[320px] min-w-[120px] self-center">
                         <Link to='/'>
-                            <img src={t("navbar.logo")} className="w-40 md:w-64 ml-4" alt="" />
+                            <img src={t("navbar.logo")} className="w-40 md:w-64" alt="" />
                         </Link>
                     </div>
                     <aside className="self-center flex flex-col justify-around md:gap-2">
@@ -40,7 +42,7 @@ const Footer = () => {
                         </div>
                     </aside>
                 </div>
-                <p className="justify-self-center self-center text-xl mb-4 lg:hidden">{t("footer.slogan")}</p>
+                <p className="justify-self-center self-center text-s md:text-xl lg:hidden">{t("footer.slogan")}</p>
             </footer>
         </div>
     )
