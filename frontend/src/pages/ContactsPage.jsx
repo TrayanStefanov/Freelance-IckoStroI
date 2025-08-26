@@ -34,7 +34,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className="overflow-hidden pt-[15vh] min-h-[80vh] font-bn text-primary">
+    <div className="overflow-hidden pt-[15vh] min-h-[80vh] font-bn text-primary content-center">
       <div className="flex flex-col lg:flex-row bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
 
         {/* Contact details */}
@@ -44,9 +44,9 @@ const Contacts = () => {
           initial="hidden"
           animate="show"
         >
-          <h1 className="text-4xl lg:text-5xl mb-6">{t("contacts.title")}</h1>
-          <p className="text-lg max-w-[80vw]">{t("contacts.text.normal")}</p>
-          <b className="mb-6 ml-2 text-2xl text-neutral">
+          <h1 className="text-5xl lg:text-7xl mb-6">{t("contacts.title")}</h1>
+          <p className="text-3xl max-w-[80vw]">{t("contacts.text.normal")}</p>
+          <b className="mb-6 ml-2 text-4xl text-neutral">
             {t("contacts.text.bold1")}, {t("contacts.text.bold2")} {t("contacts.text.bold3")}
           </b>
 
@@ -56,13 +56,13 @@ const Contacts = () => {
             initial="hidden"
             animate="show"
           >
-            <motion.h2 className="text-lg lg:text-2xl flex items-center justify-center" variants={itemVariants}>
+            <motion.h2 className="text-2xl lg:text-4xl flex items-center justify-center" variants={itemVariants}>
               <FiPhoneCall className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.phone.note")}</b>
               {t("contacts.phone.value")}
             </motion.h2>
 
-            <motion.h2 className="text-lg lg:text-2xl flex items-center justify-center" variants={itemVariants}>
+            <motion.h2 className="text-2xl lg:text-4xl flex items-center justify-center" variants={itemVariants}>
               <FiMail className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.email.note")}</b>
               <a href={`mailto:${email}`} className="hover:underline break-all">{email}</a>
