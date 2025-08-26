@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiCheckMark } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+import FactorCard from "../components/FactorCard";
 
 const AboutUs = () => {
   const { t } = useTranslation();
 
-  const factors = [
-    { title: t("about.issues.factors.1.title"), text: t("about.issues.factors.1.text") },
-    { title: t("about.issues.factors.2.title"), text: t("about.issues.factors.2.text") },
-    { title: t("about.issues.factors.3.title"), text: t("about.issues.factors.3.text") },
-    { title: t("about.issues.factors.4.title"), text: t("about.issues.factors.4.text") },
-  ];
+  const factors = Object.values(t("about.issues.factors", { returnObjects: true }));
+
 
   // Variants
   const heroDesktopVariants = { hidden: { opacity: 0, x: 50 }, show: { opacity: 1, x: 0, transition: { duration: 0.8 } } };
@@ -68,20 +66,13 @@ const AboutUs = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
           {factors.map((factor, idx) => (
-            <motion.div
+            <FactorCard
               key={idx}
-              className="p-6 border-4 border-neutral rounded-2xl bg-secondary shadow hover:shadow-xl transition-transform hover:-translate-y-2 hover:border-accent/90"
-              custom={idx}
+              factor={factor}
+              idx={idx}
+              isDesktop={isDesktop}
               variants={isDesktop ? cardDesktopVariants : cardMobileVariants}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              <h6 className="text-xl lg:text-2xl font-bold mb-3 underline underline-offset-8 decoration-primary-content text-neutral drop-shadow-sm">
-                {factor.title}
-              </h6>
-              <p className="text-base">{factor.text}</p>
-            </motion.div>
+            />
           ))}
         </div>
       </div>
