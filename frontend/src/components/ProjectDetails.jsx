@@ -1,21 +1,45 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
-
 
 const ProjectDetails = ({ project, onTagClick }) => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
   const [mobileIndex, setMobileIndex] = useState(0);
+  const [transitioning, setTransitioning] = useState(false);
 
   const totalImages = project.images.length;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const changeIndex = (newIndex) => {
+    setTransitioning(true);
+    setTimeout(() => {
+      setMobileIndex(newIndex);
+      setTransitioning(false);
+    }, 300); // match transition duration
+  };
 
   const prevImage = () => {
-    setMobileIndex((prev) => (prev === 0 ? totalImages - 1 : prev - 1));
+    changeIndex(mobileIndex === 0 ? totalImages - 1 : mobileIndex - 1);
   };
 
   const nextImage = () => {
-    setMobileIndex((prev) => (prev === totalImages - 1 ? 0 : prev + 1));
+    changeIndex(mobileIndex === totalImages - 1 ? 0 : mobileIndex + 1);
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (diff > 50) nextImage();
+    if (diff < -50) prevImage();
   };
 
   return (
@@ -53,7 +77,12 @@ const ProjectDetails = ({ project, onTagClick }) => {
       {/* Gallery */}
       <div className="mx-6 mb-10">
         {/* Mobile carousel */}
-        <div className="relative block md:hidden w-full h-64 flex items-center justify-center overflow-hidden">
+        <div
+          className="relative md:hidden w-full h-64 flex items-center justify-center overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             className="absolute left-2 z-10 bg-black bg-opacity-50 p-2 rounded-full text-white"
             onClick={prevImage}
@@ -62,9 +91,12 @@ const ProjectDetails = ({ project, onTagClick }) => {
           </button>
 
           <img
+            key={mobileIndex} 
             src={project.images[mobileIndex].src}
             alt={project.images[mobileIndex].alt}
-            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+            className={`w-full h-64 object-cover rounded-lg shadow-md cursor-pointer transition-transform duration-300 ${
+              transitioning ? "translate-x-[-100%]" : "translate-x-0"
+            }`}
             onClick={() => setSelectedImage(project.images[mobileIndex])}
           />
 
