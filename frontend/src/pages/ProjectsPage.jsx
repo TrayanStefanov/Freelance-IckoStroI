@@ -1,3 +1,4 @@
+// ProjectsPage.jsx
 import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -8,7 +9,15 @@ import ProjectPagination from "../components/ProjectPagination.jsx";
 const ProjectsPage = () => {
   const { t } = useTranslation();
 
-  const projects = t("allProjects", { returnObjects: true });
+  // normalize tags: ensure tags is always an array
+  const projects = t("allProjects", { returnObjects: true }).map((p) => ({
+    ...p,
+    tags: Array.isArray(p.tags)
+      ? p.tags
+      : typeof p.tags === "string"
+      ? p.tags.split(",").map((t) => t.trim())
+      : [],
+  }));
 
   const [currentProject, setCurrentProject] = useState(projects[0]);
   const [currentPage, setCurrentPage] = useState(0);
