@@ -270,12 +270,12 @@
     "time": "- 7 работни дни",
     "mainImage": "/projects/Mall_project/1.png",
     "images": [
-      "/projects/Mall_project/1.png",
-      "/projects/Mall_project/2.png",
-      "/projects/Mall_project/3.png",
-      "/projects/Mall_project/4.png",
-      "/projects/Mall_project/5.png",
-      "/projects/Mall_project/6.png"
+      { "src": "/projects/Mall_project/1.png", "alt":"Мол проект снимка 1"},
+      { "src": "/projects/Mall_project/2.png", "alt":"Мол проект снимка 2"},
+      { "src": "/projects/Mall_project/3.png", "alt":"Мол проект снимка 3"},
+      { "src": "/projects/Mall_project/4.png", "alt":"Мол проект снимка 4"},
+      { "src": "/projects/Mall_project/5.png", "alt":"Мол проект снимка 5"},
+      { "src": "/projects/Mall_project/6.png", "alt":"Мол проект снимка 6"}
     ]
   }
 }
