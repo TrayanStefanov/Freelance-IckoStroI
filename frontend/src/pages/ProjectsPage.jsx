@@ -30,20 +30,21 @@ const ProjectsPage = () => {
     currentPage * projectsPerPage + projectsPerPage
   );
 
-  const handleTagClick = (tag) => {
-    setTagFilter(tag);
-    setCurrentProject(null); 
-    setCurrentPage(0);       
-  };
-
   const handleProjectSelect = (project) => {
     setCurrentProject(project);
-    setTagFilter(null);       
-    setCurrentPage(0);        
+    setTagFilter(null);
+    setCurrentPage(0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleTagClick = (tag) => {
+    setTagFilter(tag);
+    setCurrentProject(null);
+    setCurrentPage(0);
   };
 
   return (
-    <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto pt-[10vh] lg:pt-[15vh] pb-10">
+    <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto pt-[15vh] pb-10">
       {currentProject && (
         <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
       )}
