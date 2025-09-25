@@ -1,3 +1,4 @@
+// ProjectDetails.jsx
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,6 +7,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // mobile carousel: index + direction
   const [page, setPage] = useState({ index: 0, dir: 0 });
   const total = project.images.length;
 
@@ -14,23 +16,9 @@ const ProjectDetails = ({ project, onTagClick }) => {
 
   // animation variants
   const variants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.98,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      zIndex: 1,
-    },
-    exit: (dir) => ({
-      x: dir > 0 ? -300 : 300,
-      opacity: 0,
-      scale: 0.98,
-      zIndex: 0,
-    }),
+    enter: (dir) => ({ x: dir > 0 ? 300 : -300, opacity: 0, scale: 0.98 }),
+    center: { x: 0, opacity: 1, scale: 1, zIndex: 1 },
+    exit: (dir) => ({ x: dir > 0 ? -300 : 300, opacity: 0, scale: 0.98, zIndex: 0 }),
   };
 
   const paginate = (inc) => {
@@ -43,23 +31,16 @@ const ProjectDetails = ({ project, onTagClick }) => {
   const goTo = (target) => {
     setPage((prev) => {
       if (target === prev.index) return prev;
-
       let dir;
       if (prev.index === total - 1 && target === 0) dir = 1;
       else if (prev.index === 0 && target === total - 1) dir = -1;
       else dir = target > prev.index ? 1 : -1;
-
       return { index: target, dir };
     });
   };
 
-  // swipe
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
+  const handleTouchStart = (e) => (touchStartX.current = e.touches[0].clientX);
+  const handleTouchMove = (e) => (touchEndX.current = e.touches[0].clientX);
   const handleTouchEnd = () => {
     const diff = touchStartX.current - touchEndX.current;
     if (diff > 50) paginate(1);
@@ -72,14 +53,10 @@ const ProjectDetails = ({ project, onTagClick }) => {
         src={project.mainImage}
         alt={project.title}
         className="w-[98vw] lg:w-[70vw] h-[40vh] lg:h-[60vh] object-cover rounded-lg mb-10 mx-auto cursor-pointer"
-        onClick={() =>
-          setSelectedImage({ src: project.mainImage, alt: project.title })
-        }
+        onClick={() => setSelectedImage({ src: project.mainImage, alt: project.title })}
       />
 
-      <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center">
-        {project.title}
-      </h1>
+      <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center">{project.title}</h1>
 
       <h2 className="text-2xl lg:text-3xl mb-4 indent-4 italic mx-6">
         {project.tags.map((tag, i) => (
@@ -111,7 +88,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
           {/* Animated image */}
           <AnimatePresence custom={page.dir} initial={false}>
             <motion.img
-              key={`${page.index}-${project.images[page.index].src}`}
+              key={page.index}
               src={project.images[page.index].src}
               alt={project.images[page.index].alt}
               className="absolute w-full h-64 object-cover rounded-lg shadow-md cursor-pointer left-0 top-0"
@@ -121,26 +98,19 @@ const ProjectDetails = ({ project, onTagClick }) => {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.18 },
-              }}
+              transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.18 } }}
             />
           </AnimatePresence>
         </div>
 
         {/* Dots */}
-        <div className="md:hidden mt-3 flex justify-center items-center gap-2">
+        <div className="block md:hidden mt-3 flex justify-center items-center gap-2">
           {project.images.map((_, i) => (
             <button
-              key={`${i}-${project.images[i].src}`}
+              key={i}
               aria-label={`Go to image ${i + 1}`}
               onClick={() => goTo(i)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                i === page.index
-                  ? "bg-accent w-3 h-3"
-                  : "bg-white bg-opacity-40"
-              }`}
+              className={`w-2 h-2 rounded-full transition-all ${i === page.index ? "bg-accent w-3 h-3" : "bg-white bg-opacity-40"}`}
             />
           ))}
         </div>
@@ -149,7 +119,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {project.images.map((img, index) => (
             <img
-              key={`${index}-${img.src}`}
+              key={index}
               src={img.src}
               alt={img.alt}
               loading="lazy"
