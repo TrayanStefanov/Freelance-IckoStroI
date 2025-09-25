@@ -24,7 +24,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-neutral-content flex flex-col items-center justify-center h-full p-6 md:p-12 lg:p-20 gap-6">
         {/* Title build-up */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold max-w-4xl flex flex-wrap justify-center leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold max-w-4xl flex flex-wrap justify-center leading-tight mt-32 ">
           {titleLetters.map((letter, index) => (
             <motion.span
               key={index}

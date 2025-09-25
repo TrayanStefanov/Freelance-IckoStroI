@@ -18,11 +18,11 @@ const AboutUsSection = () => {
   return (
     <div className="min-h-screen overflow-hidden pb-20 font-bn text-primary">
       {/* Intro */}
-      <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 px-6 lg:px-20">
+      <div className="relative flex flex-col md:flex-row  items-start w-[90vw] justify-center justify-self-center gap-10">
         <motion.img
           src="./aboutUs-solo.jpg"
           alt="About us"
-          className="lg:w-1/3 max-h-[60vh] object-cover rounded-3xl shadow-xl border-4 border-secondary"
+          className="w-screen  md:w-1/2 max-h-[60vh] object-cover rounded-3xl shadow-xl border-4 border-secondary"
           variants={isDesktop ? heroDesktopVariants : heroMobileVariants}
           initial="hidden"
           whileInView="show"
@@ -53,9 +53,9 @@ const AboutUsSection = () => {
       </div>
 
       {/* Issues */}
-      <div className="mt-12">
-        <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mb-12">{t("about.issues.title")}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
+      <div className="mt-12 w-[90vw] mx-auto">
+        <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mt-24 mb-12">{t("about.issues.title")}</h2>
+        <div className="min-w-[90vw] place-self-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {factors.map((factor, idx) => (
             <FactorCard
               key={idx}

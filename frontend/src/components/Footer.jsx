@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <div>
             <footer className={`footer bg-secondary text-primary justify-around border-t-2 border-primary block ${contactsStyle}`}>
-                <div className="flex flex-row justify-between w-full px-2 md:px-4 mt-4">
+                <div className="flex flex-row justify-between w-full md:px-4 mt-4">
                     <div className="aspect-[3/1] md:max-w-[240px] lg:max-w-[320px] min-w-[120px] self-center">
                         <Link to='/'>
                             <img src={t("navbar.logo")} className="w-40 md:w-64" alt="" />
@@ -42,7 +42,7 @@ const Footer = () => {
                         </div>
                     </aside>
                 </div>
-                <p className="justify-self-center self-center text-s md:text-xl lg:hidden">{t("footer.slogan")}</p>
+                <p className="justify-self-center self-center text-s mb-2 md:text-xl lg:hidden">{t("footer.slogan")}</p>
             </footer>
         </div>
     )
