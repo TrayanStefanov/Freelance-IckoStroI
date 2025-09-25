@@ -5,7 +5,6 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import ProjectDetails from "../components/ProjectDetails.jsx";
 import ProjectPagination from "../components/ProjectPagination.jsx";
 
-
 const ProjectsPage = () => {
   const { t } = useTranslation();
 
@@ -17,10 +16,10 @@ const ProjectsPage = () => {
 
   // Filtered + paginated list
   const filteredProjects = useMemo(() => {
-    let list = projects.filter((p) => p.title !== currentProject.title);
-    if (tagFilter) {
-      list = list.filter((p) => p.tags.includes(tagFilter));
-    }
+    let list = projects.filter((p) => {
+      if (tagFilter) return p.tags.includes(tagFilter);
+      return p.title !== currentProject?.title;
+    });
     return list;
   }, [projects, currentProject, tagFilter]);
 
@@ -31,26 +30,34 @@ const ProjectsPage = () => {
     currentPage * projectsPerPage + projectsPerPage
   );
 
+  const handleTagClick = (tag) => {
+    setTagFilter(tag);
+    setCurrentProject(null); 
+    setCurrentPage(0);       
+  };
+
+  const handleProjectSelect = (project) => {
+    setCurrentProject(project);
+    setTagFilter(null);       
+    setCurrentPage(0);        
+  };
+
   return (
     <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto pt-[10vh] lg:pt-[15vh] pb-10">
-      {/* Current Project */}
-      <ProjectDetails project={currentProject} onTagClick={setTagFilter} />
+      {currentProject && (
+        <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
+      )}
 
-      {/* Grid of projects */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6">
         {paginatedProjects.map((project, index) => (
           <ProjectCard
             key={index}
             project={project}
-            onSelect={(p) => {
-              setCurrentProject(p);
-              setCurrentPage(0);
-            }}
+            onSelect={handleProjectSelect}
           />
         ))}
       </div>
 
-      {/* Pagination */}
       {filteredProjects.length > projectsPerPage && (
         <ProjectPagination
           totalPages={totalPages}
