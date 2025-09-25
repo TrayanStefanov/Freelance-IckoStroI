@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const ProjectDetail = ({ project, onTagClick }) => {
+const ProjectDetails = ({ project, onTagClick }) => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -35,17 +35,19 @@ const ProjectDetail = ({ project, onTagClick }) => {
         {project.description}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
-        {project.images.map((img, index) => (
-          <img
-            key={index}
-            src={img.src}
-            alt={img.alt}
-            loading="lazy"
-            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
-            onClick={() => setSelectedImage(img)}
-          />
-        ))}
+      <div className="mx-6 mb-10">
+        <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+          {project.images.map((img, index) => (
+            <img
+              key={index}
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="flex-shrink-0 w-64 h-40 md:w-full md:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
+              onClick={() => setSelectedImage(img)}
+            />
+          ))}
+        </div>
       </div>
 
       {selectedImage && (
@@ -66,4 +68,4 @@ const ProjectDetail = ({ project, onTagClick }) => {
   );
 };
 
-export default ProjectDetail;
+export default ProjectDetails;
