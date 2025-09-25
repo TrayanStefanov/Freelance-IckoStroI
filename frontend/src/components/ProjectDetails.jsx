@@ -1,45 +1,69 @@
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ProjectDetails = ({ project, onTagClick }) => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
-  const [mobileIndex, setMobileIndex] = useState(0);
-  const [transitioning, setTransitioning] = useState(false);
 
-  const totalImages = project.images.length;
+  const [page, setPage] = useState({ index: 0, dir: 0 });
+  const total = project.images.length;
+
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  const changeIndex = (newIndex) => {
-    setTransitioning(true);
-    setTimeout(() => {
-      setMobileIndex(newIndex);
-      setTransitioning(false);
-    }, 300); // match transition duration
+  // animation variants
+  const variants = {
+    enter: (dir) => ({
+      x: dir > 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.98,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      zIndex: 1,
+    },
+    exit: (dir) => ({
+      x: dir > 0 ? -300 : 300,
+      opacity: 0,
+      scale: 0.98,
+      zIndex: 0,
+    }),
   };
 
-  const prevImage = () => {
-    changeIndex(mobileIndex === 0 ? totalImages - 1 : mobileIndex - 1);
+  const paginate = (inc) => {
+    setPage((prev) => {
+      const nextIndex = (prev.index + inc + total) % total;
+      return { index: nextIndex, dir: inc > 0 ? 1 : -1 };
+    });
   };
 
-  const nextImage = () => {
-    changeIndex(mobileIndex === totalImages - 1 ? 0 : mobileIndex + 1);
+  const goTo = (target) => {
+    setPage((prev) => {
+      if (target === prev.index) return prev;
+
+      let dir;
+      if (prev.index === total - 1 && target === 0) dir = 1;
+      else if (prev.index === 0 && target === total - 1) dir = -1;
+      else dir = target > prev.index ? 1 : -1;
+
+      return { index: target, dir };
+    });
   };
 
+  // swipe
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
-
   const handleTouchMove = (e) => {
     touchEndX.current = e.touches[0].clientX;
   };
-
   const handleTouchEnd = () => {
     const diff = touchStartX.current - touchEndX.current;
-    if (diff > 50) nextImage();
-    if (diff < -50) prevImage();
+    if (diff > 50) paginate(1);
+    else if (diff < -50) paginate(-1);
   };
 
   return (
@@ -75,50 +99,62 @@ const ProjectDetails = ({ project, onTagClick }) => {
       </p>
 
       {/* Gallery */}
-      <div className="mx-6 mb-10">
+      <div className="mx-6 mb-4">
         {/* Mobile carousel */}
         <div
-          className="relative md:hidden w-full h-64 flex items-center justify-center overflow-hidden"
+          className="relative block md:hidden w-full h-64 overflow-hidden rounded-lg"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <button
-            className="absolute left-2 z-10 bg-black bg-opacity-50 p-2 rounded-full text-white"
-            onClick={prevImage}
-          >
-            <MdKeyboardDoubleArrowLeft size={24} />
-          </button>
 
-          <img
-            key={mobileIndex} 
-            src={project.images[mobileIndex].src}
-            alt={project.images[mobileIndex].alt}
-            className={`w-full h-64 object-cover rounded-lg shadow-md cursor-pointer transition-transform duration-300 ${
-              transitioning ? "translate-x-[-100%]" : "translate-x-0"
-            }`}
-            onClick={() => setSelectedImage(project.images[mobileIndex])}
-          />
+          {/* Animated image */}
+          <AnimatePresence custom={page.dir} initial={false}>
+            <motion.img
+              key={`${page.index}-${project.images[page.index].src}`}
+              src={project.images[page.index].src}
+              alt={project.images[page.index].alt}
+              className="absolute w-full h-64 object-cover rounded-lg shadow-md cursor-pointer left-0 top-0"
+              onClick={() => setSelectedImage(project.images[page.index])}
+              custom={page.dir}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.18 },
+              }}
+            />
+          </AnimatePresence>
+        </div>
 
-          <button
-            className="absolute right-2 z-10 bg-black bg-opacity-50 p-2 rounded-full text-white"
-            onClick={nextImage}
-          >
-            <MdKeyboardDoubleArrowRight size={24} />
-          </button>
+        {/* Dots */}
+        <div className="md:hidden mt-3 flex justify-center items-center gap-2">
+          {project.images.map((_, i) => (
+            <button
+              key={`${i}-${project.images[i].src}`}
+              aria-label={`Go to image ${i + 1}`}
+              onClick={() => goTo(i)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === page.index
+                  ? "bg-accent w-3 h-3"
+                  : "bg-white bg-opacity-40"
+              }`}
+            />
+          ))}
         </div>
 
         {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 no-scrollbar">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {project.images.map((img, index) => (
             <img
-              key={index}
+              key={`${index}-${img.src}`}
               src={img.src}
               alt={img.alt}
               loading="lazy"
               className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
               onClick={() => setSelectedImage(img)}
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             />
           ))}
         </div>
