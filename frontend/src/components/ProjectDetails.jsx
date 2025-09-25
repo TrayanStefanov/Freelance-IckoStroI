@@ -1,9 +1,22 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
+
 
 const ProjectDetails = ({ project, onTagClick }) => {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  const totalImages = project.images.length;
+
+  const prevImage = () => {
+    setMobileIndex((prev) => (prev === 0 ? totalImages - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setMobileIndex((prev) => (prev === totalImages - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="mb-12">
@@ -11,7 +24,9 @@ const ProjectDetails = ({ project, onTagClick }) => {
         src={project.mainImage}
         alt={project.title}
         className="w-[98vw] lg:w-[70vw] h-[40vh] lg:h-[60vh] object-cover rounded-lg mb-10 mx-auto cursor-pointer"
-        onClick={() => setSelectedImage({ src: project.mainImage, alt: project.title })}
+        onClick={() =>
+          setSelectedImage({ src: project.mainImage, alt: project.title })
+        }
       />
 
       <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center">
@@ -35,21 +50,49 @@ const ProjectDetails = ({ project, onTagClick }) => {
         {project.description}
       </p>
 
+      {/* Gallery */}
       <div className="mx-6 mb-10">
-        <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        {/* Mobile carousel */}
+        <div className="relative block md:hidden w-full h-64 flex items-center justify-center overflow-hidden">
+          <button
+            className="absolute left-2 z-10 bg-black bg-opacity-50 p-2 rounded-full text-white"
+            onClick={prevImage}
+          >
+            <MdKeyboardDoubleArrowLeft size={24} />
+          </button>
+
+          <img
+            src={project.images[mobileIndex].src}
+            alt={project.images[mobileIndex].alt}
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+            onClick={() => setSelectedImage(project.images[mobileIndex])}
+          />
+
+          <button
+            className="absolute right-2 z-10 bg-black bg-opacity-50 p-2 rounded-full text-white"
+            onClick={nextImage}
+          >
+            <MdKeyboardDoubleArrowRight size={24} />
+          </button>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 no-scrollbar">
           {project.images.map((img, index) => (
             <img
               key={index}
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="flex-shrink-0 w-64 h-40 md:w-full md:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
+              className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
               onClick={() => setSelectedImage(img)}
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             />
           ))}
         </div>
       </div>
 
+      {/* Modal / Lightbox */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
