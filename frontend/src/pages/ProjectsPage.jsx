@@ -15,8 +15,8 @@ const ProjectsPage = () => {
     tags: Array.isArray(p.tags)
       ? p.tags
       : typeof p.tags === "string"
-      ? p.tags.split(",").map((t) => t.trim())
-      : [],
+        ? p.tags.split(",").map((t) => t.trim())
+        : [],
   }));
 
   const [currentProject, setCurrentProject] = useState(projects[0]);
@@ -56,6 +56,12 @@ const ProjectsPage = () => {
     <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto pt-[15vh] pb-10">
       {currentProject && (
         <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
+      )}
+
+      {tagFilter && (
+        <h2 className="text-2xl lg:text-3xl font-semibold mb-6 mx-6">
+          {t("filteredByTag", { tag: tagFilter }) || `Showing results for #${tagFilter}`}
+        </h2>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6">
