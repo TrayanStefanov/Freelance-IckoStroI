@@ -481,5 +481,5 @@
       ]
     }
   ],
-  "filteredByTag": "Showing results for #{{tag}}"
+  "filteredByTag": "Showing results for - {{tag}}"
 }
