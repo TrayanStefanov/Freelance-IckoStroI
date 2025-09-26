@@ -41,7 +41,7 @@ const ProjectsPage = () => {
 
   const handleProjectSelect = (project) => {
     setCurrentProject(project);
-    setTagFilter(null);
+    setTagFilter(null); 
     setCurrentPage(0);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -59,7 +59,7 @@ const ProjectsPage = () => {
       )}
 
       {tagFilter && (
-        <h2 className="text-2xl lg:text-3xl font-semibold mb-6 mx-6">
+        <h2 className="text-2xl lg:text-4xl font-semibold mb-6 mx-6 justify-self-center">
           {t("filteredByTag", { tag: tagFilter }) || `Showing results for #${tagFilter}`}
         </h2>
       )}
@@ -70,6 +70,8 @@ const ProjectsPage = () => {
             key={index}
             project={project}
             onSelect={handleProjectSelect}
+            onTagClick={handleTagClick}
+            tagFilter={tagFilter}
           />
         ))}
       </div>
