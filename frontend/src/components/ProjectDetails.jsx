@@ -61,7 +61,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
             <div className="flex justify-between mx-6">
                 <h2 className="text-3xl lg:text-4xl">
                     {project.tagsTitle}
-                    <div className="text-xl lg:text-2xl flex flex-wrap">
+                    <div className="text-xl lg:text-2xl flex flex-wrap mt-4">
                         {project.tags.map((tag, i) => (
                             <TagButton key={i} tag={tag} onClick={onTagClick} />
                         ))}
@@ -69,7 +69,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
                 </h2>
                 <h2 className="text-3xl lg:text-4xl">
                     {project.timeTitle}
-                    <div className="text-xl lg:text-2xl text-right">
+                    <div className="text-xl lg:text-2xl text-right mt-4">
                         {project.time}
                     </div>
                 </h2>
