@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
+import TagButton from "./TagButton";
 
 const ProjectDetails = ({ project, onTagClick }) => {
     const { t } = useTranslation();
@@ -60,19 +61,10 @@ const ProjectDetails = ({ project, onTagClick }) => {
             <div className="flex justify-between mx-6">
                 <h2 className="text-3xl lg:text-4xl">
                     {project.tagsTitle}
-                    <div className="text-xl lg:text-2xl">
-
+                    <div className="text-xl lg:text-2xl flex flex-wrap">
                         {project.tags.map((tag, i) => (
-                            <button
-                                key={i}
-                                onClick={() => onTagClick(tag)}
-                                className="px-3 py-1 rounded-full text-sm lg:text-base bg-gray-200 text-gray-800 
-               hover:bg-accent hover:text-white transition-colors mx-1 my-1 shadow-sm"
-                            >
-                                #{tag}
-                            </button>
+                            <TagButton key={i} tag={tag} onClick={onTagClick} />
                         ))}
-
                     </div>
                 </h2>
                 <h2 className="text-3xl lg:text-4xl">
