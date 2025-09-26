@@ -263,223 +263,452 @@
     "text": "Sorry, the page you are looking for doesn't exist or has been moved. Please use the navigation above to find what you are looking for.",
     "btn": "Go to HomePage"
   },
-  "allProjects": [
-    {
-      "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
-      "tagsTitle": "Services provided:",
-      "tags": ["Renovation", "Painting", "Interior", "Mall"],
-      "description": "We carried out a complete refresh of the interior spaces in a large shopping mall, focusing primarily on the ceilings and columns. The work included surface preparation through sanding and plastering, removal of old coatings, and application of high-quality, long-lasting paints. For the columns, we used wear-resistant coatings to ensure durability and easy maintenance, while the ceilings were painted with white dispersion paint to create a brighter and more spacious look. The project was completed within a short timeframe and with minimal disruption to the operation of the retail stores. The final result is a modern, clean, and fresh appearance that enhances the overall experience of visitors.",
-      "timeTitle": "Time to complete:",
-      "time": "7 working days",
-      "mainImage": "/projects/Mall_project/1.png",
-      "images": [
-        { "src": "/projects/Mall_project/1.png", "alt": "Mall project photo 1" },
-        { "src": "/projects/Mall_project/2.png", "alt": "Mall project photo 2" },
-        { "src": "/projects/Mall_project/3.png", "alt": "Mall project photo 3" },
-        { "src": "/projects/Mall_project/4.png", "alt": "Mall project photo 4" },
-        { "src": "/projects/Mall_project/5.png", "alt": "Mall project photo 5" },
-        { "src": "/projects/Mall_project/6.png", "alt": "Mall project photo 6" }
-      ]
-    },
-    {
-      "title": "Office Space Redesign and Painting",
-      "tagsTitle": "Services provided:",
-      "tags": ["Office", "Interior", "Painting", "Renovation"],
-      "description": "Complete interior redesign of a corporate office space. Includes modern color schemes, durable paints for high-traffic areas, and optimized lighting through reflective wall finishes.",
-      "timeTitle": "Time to complete:",
-      "time": "10 working days",
-      "mainImage": "/projects/Office_project/1.avif",
-      "images": [
-        { "src": "/projects/Office_project/1.avif", "alt": "Office project photo 1" },
-        { "src": "/projects/Office_project/2.avif", "alt": "Office project photo 2" },
-        { "src": "/projects/Office_project/3.avif", "alt": "Office project photo 3" }
-      ]
-    },
-    {
-      "title": "Residential Apartment Renovation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Residential", "Interior", "Renovation"],
-      "description": "Full renovation of a 3-bedroom apartment including repainting, flooring upgrades, and ceiling refinishing. Used eco-friendly paints for a safe and modern look.",
-      "timeTitle": "Time to complete:",
-      "time": "14 working days",
-      "mainImage": "/projects/Apartment_project/1.avif",
-      "images": [
-        { "src": "/projects/Apartment_project/1.avif", "alt": "Apartment project photo 1" },
-        { "src": "/projects/Apartment_project/2.avif", "alt": "Apartment project photo 2" }
-      ]
-    },
-    {
-      "title": "Industrial Warehouse Repainting",
-      "tagsTitle": "Services provided:",
-      "tags": ["Industrial", "Warehouse", "Painting"],
-      "description": "Repainting of large warehouse walls and ceilings with industrial-grade paints for durability and resistance against dust and moisture.",
-      "timeTitle": "Time to complete:",
-      "time": "12 working days",
-      "mainImage": "/projects/Warehouse_project/1.avif",
-      "images": [
-        { "src": "/projects/Warehouse_project/1.avif", "alt": "Warehouse project photo 1" },
-        { "src": "/projects/Warehouse_project/2.avif", "alt": "Warehouse project photo 2" }
-      ]
-    },
-    {
-      "title": "Restaurant Interior Painting",
-      "tagsTitle": "Services provided:",
-      "tags": ["Restaurant", "Interior", "Painting"],
-      "description": "Modern color palette applied to restaurant interior walls and ceilings, improving the atmosphere for customers while ensuring easy maintenance.",
-      "timeTitle": "Time to complete:",
-      "time": "5 working days",
-      "mainImage": "/projects/Restaurant_project/1.avif",
-      "images": [
-        { "src": "/projects/Restaurant_project/1.avif", "alt": "Restaurant project photo 1" },
-        { "src": "/projects/Restaurant_project/2.avif", "alt": "Restaurant project photo 2" }
-      ]
-    },
-    {
-      "title": "Modern Office Space Overhaul",
-      "tagsTitle": "Services provided:",
-      "tags": ["Office", "Renovation", "Interior", "Modern"],
-      "description": "A complete redesign of a corporate office space, featuring open-plan layouts, ergonomic furniture, and contemporary design elements.",
-      "timeTitle": "Time to complete:",
-      "time": "15 working days",
-      "mainImage": "/projects/ModernOffice/1.avif",
-      "images": [
-        { "src": "/projects/ModernOffice/1.avif", "alt": "Modern Office photo 1" },
-        { "src": "/projects/ModernOffice/2.avif", "alt": "Modern Office photo 2" }
-      ]
-    },
-    {
-      "title": "Luxury Hotel Lobby Redesign",
-      "tagsTitle": "Services provided:",
-      "tags": ["Hotel", "Interior", "Design", "Luxury"],
-      "description": "Revamping the lobby of a luxury hotel to create an inviting and sophisticated atmosphere for guests.",
-      "timeTitle": "Time to complete:",
-      "time": "20 working days",
-      "mainImage": "/projects/HotelLobby/1.avif",
-      "images": [
-        { "src": "/projects/HotelLobby/1.avif", "alt": "Hotel Lobby photo 1" },
-        { "src": "/projects/HotelLobby/2.avif", "alt": "Hotel Lobby photo 2" }
-      ]
-    },
-    {
-      "title": "Residential Home Renovation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Residential", "Renovation", "Interior", "Modern"],
-      "description": "A full renovation of a family home, including kitchen remodel, bathroom upgrades, and living room redesign.",
-      "timeTitle": "Time to complete:",
-      "time": "30 working days",
-      "mainImage": "/projects/ResidentialHome/1.avif",
-      "images": [
-        { "src": "/projects/ResidentialHome/1.avif", "alt": "Residential Home photo 1" },
-        { "src": "/projects/ResidentialHome/2.avif", "alt": "Residential Home photo 2" },
-        { "src": "/projects/ResidentialHome/3.avif", "alt": "Residential Home photo 3" }
-      ]
-    },
-    {
-      "title": "Retail Store Interior Makeover",
-      "tagsTitle": "Services provided:",
-      "tags": ["Retail", "Interior", "Design", "Modern"],
-      "description": "Transforming a retail store's interior to enhance customer experience and product display.",
-      "timeTitle": "Time to complete:",
-      "time": "10 working days",
-      "mainImage": "/projects/RetailStore/1.avif",
-      "images": [
-        { "src": "/projects/RetailStore/1.avif", "alt": "Retail Store photo 1" },
-        { "src": "/projects/RetailStore/2.avif", "alt": "Retail Store photo 2" }
-      ]
-    },
-    {
-      "title": "Restaurant Dining Area Redesign",
-      "tagsTitle": "Services provided:",
-      "tags": ["Restaurant", "Interior", "Design", "Modern"],
-      "description": "Redesigning the dining area of a restaurant to create a more comfortable and stylish environment for diners.",
-      "timeTitle": "Time to complete:",
-      "time": "12 working days",
-      "mainImage": "/projects/RestaurantDining/1.avif",
-      "images": [
-        { "src": "/projects/RestaurantDining/1.avif", "alt": "Restaurant Dining photo 1" },
-        { "src": "/projects/RestaurantDining/2.avif", "alt": "Restaurant Dining photo 2" },
-        { "src": "/projects/RestaurantDining/3.avif", "alt": "Restaurant Dining photo 3" },
-        { "src": "/projects/RestaurantDining/4.avif", "alt": "Restaurant Dining photo 4" },
-        { "src": "/projects/RestaurantDining/5.avif", "alt": "Restaurant Dining photo 5" },
-        { "src": "/projects/RestaurantDining/6.avif", "alt": "Restaurant Dining photo 6" },
-        { "src": "/projects/RestaurantDining/7.avif", "alt": "Restaurant Dining photo 7" },
-        { "src": "/projects/RestaurantDining/8.avif", "alt": "Restaurant Dining photo 8" }
-      ]
-    },
-    {
-      "title": "Spa Center Interior Renovation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Spa", "Interior", "Renovation", "Luxury"],
-      "description": "Renovating the interior of a spa center to enhance relaxation and comfort for guests.",
-      "timeTitle": "Time to complete:",
-      "time": "18 working days",
-      "mainImage": "/projects/SpaCenter/1.avif",
-      "images": [
-        { "src": "/projects/SpaCenter/1.avif", "alt": "Spa Center photo 1" },
-        { "src": "/projects/SpaCenter/2.avif", "alt": "Spa Center photo 2" }
-      ]
-    },
-    {
-      "title": "Office Break Room Transformation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Office", "Interior", "Design", "Modern"],
-      "description": "Transforming the office break room into a more inviting and functional space for employees.",
-      "timeTitle": "Time to complete:",
-      "time": "8 working days",
-      "mainImage": "/projects/OfficeBreak/1.avif",
-      "images": [
-        { "src": "/projects/OfficeBreak/1.avif", "alt": "Office Break Room photo 1" },
-        { "src": "/projects/OfficeBreak/2.avif", "alt": "Office Break Room photo 2" },
-        { "src": "/projects/OfficeBreak/3.avif", "alt": "Office Break Room photo 3" },
-        { "src": "/projects/OfficeBreak/4.avif", "alt": "Office Break Room photo 4" }
-      ]
-    },
-    {
-      "title": "Hotel Room Renovation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Hotel", "Renovation", "Interior", "Modern"],
-      "description": "Renovating hotel rooms to provide guests with a more comfortable and modern stay.",
-      "timeTitle": "Time to complete:",
-      "time": "25 working days",
-      "mainImage": "/projects/HotelRoom/1.avif",
-      "images": [
-        { "src": "/projects/HotelRoom/1.avif", "alt": "Hotel Room photo 1" },
-        { "src": "/projects/HotelRoom/2.avif", "alt": "Hotel Room photo 2" }
-      ]
-    },
-    {
-      "title": "Conference Room Redesign",
-      "tagsTitle": "Services provided:",
-      "tags": ["Office", "Interior", "Design", "Modern"],
-      "description": "Redesigning the conference room to improve functionality and aesthetics for meetings.",
-      "timeTitle": "Time to complete:",
-      "time": "14 working days",
-      "mainImage": "/projects/ConferenceRoom/1.avif",
-      "images": [
-        { "src": "/projects/ConferenceRoom/1.avif", "alt": "Conference Room photo 1" },
-        { "src": "/projects/ConferenceRoom/2.avif", "alt": "Conference Room photo 2" },
-        { "src": "/projects/ConferenceRoom/3.avif", "alt": "Conference Room photo 3" }
-      ]
-    },
-    {
-      "title": "Retail Store Facade Renovation",
-      "tagsTitle": "Services provided:",
-      "tags": ["Retail", "Renovation", "Exterior", "Modern"],
-      "description": "Renovating the exterior facade of a retail store to attract more customers and enhance brand image.",
-      "timeTitle": "Time to complete:",
-      "time": "10 working days",
-      "mainImage": "/projects/RetailFacade/1.avif",
-      "images": [
-        { "src": "/projects/RetailFacade/1.avif", "alt": "Retail Store Facade photo 1" },
-        { "src": "/projects/RetailFacade/2.avif", "alt": "Retail Store Facade photo 2" },
-        { "src": "/projects/RetailFacade/3.avif", "alt": "Retail Store Facade photo 3" },
-        { "src": "/projects/RetailFacade/4.avif", "alt": "Retail Store Facade photo 4" }, 
-        { "src": "/projects/RetailFacade/5.avif", "alt": "Retail Store Facade photo 5" },
-        { "src": "/projects/RetailFacade/6.avif", "alt": "Retail Store Facade photo 6" },
-        { "src": "/projects/RetailFacade/7.avif", "alt": "Retail Store Facade photo 7" },
-        { "src": "/projects/RetailFacade/8.avif", "alt": "Retail Store Facade photo 8" }
-      ]
-    }
-  ],
-  "filteredByTag": "Showing results for - {{tag}}"
+  "projects": {
+    "title": "Browse our projects",
+    "allProjects": [
+      {
+        "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Renovation",
+          "Painting",
+          "Interior",
+          "Mall"
+        ],
+        "description": "We carried out a complete refresh of the interior spaces in a large shopping mall, focusing primarily on the ceilings and columns. The work included surface preparation through sanding and plastering, removal of old coatings, and application of high-quality, long-lasting paints. For the columns, we used wear-resistant coatings to ensure durability and easy maintenance, while the ceilings were painted with white dispersion paint to create a brighter and more spacious look. The project was completed within a short timeframe and with minimal disruption to the operation of the retail stores. The final result is a modern, clean, and fresh appearance that enhances the overall experience of visitors.",
+        "timeTitle": "Time to complete:",
+        "time": "7 working days",
+        "mainImage": "/projects/Mall_project/1.png",
+        "images": [
+          {
+            "src": "/projects/Mall_project/1.png",
+            "alt": "Mall project photo 1"
+          },
+          {
+            "src": "/projects/Mall_project/2.png",
+            "alt": "Mall project photo 2"
+          },
+          {
+            "src": "/projects/Mall_project/3.png",
+            "alt": "Mall project photo 3"
+          },
+          {
+            "src": "/projects/Mall_project/4.png",
+            "alt": "Mall project photo 4"
+          },
+          {
+            "src": "/projects/Mall_project/5.png",
+            "alt": "Mall project photo 5"
+          },
+          {
+            "src": "/projects/Mall_project/6.png",
+            "alt": "Mall project photo 6"
+          }
+        ]
+      },
+      {
+        "title": "Office Space Redesign and Painting",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Office",
+          "Interior",
+          "Painting",
+          "Renovation"
+        ],
+        "description": "Complete interior redesign of a corporate office space. Includes modern color schemes, durable paints for high-traffic areas, and optimized lighting through reflective wall finishes.",
+        "timeTitle": "Time to complete:",
+        "time": "10 working days",
+        "mainImage": "/projects/Office_project/1.avif",
+        "images": [
+          {
+            "src": "/projects/Office_project/1.avif",
+            "alt": "Office project photo 1"
+          },
+          {
+            "src": "/projects/Office_project/2.avif",
+            "alt": "Office project photo 2"
+          },
+          {
+            "src": "/projects/Office_project/3.avif",
+            "alt": "Office project photo 3"
+          }
+        ]
+      },
+      {
+        "title": "Residential Apartment Renovation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Residential",
+          "Interior",
+          "Renovation"
+        ],
+        "description": "Full renovation of a 3-bedroom apartment including repainting, flooring upgrades, and ceiling refinishing. Used eco-friendly paints for a safe and modern look.",
+        "timeTitle": "Time to complete:",
+        "time": "14 working days",
+        "mainImage": "/projects/Apartment_project/1.avif",
+        "images": [
+          {
+            "src": "/projects/Apartment_project/1.avif",
+            "alt": "Apartment project photo 1"
+          },
+          {
+            "src": "/projects/Apartment_project/2.avif",
+            "alt": "Apartment project photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Industrial Warehouse Repainting",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Industrial",
+          "Warehouse",
+          "Painting"
+        ],
+        "description": "Repainting of large warehouse walls and ceilings with industrial-grade paints for durability and resistance against dust and moisture.",
+        "timeTitle": "Time to complete:",
+        "time": "12 working days",
+        "mainImage": "/projects/Warehouse_project/1.avif",
+        "images": [
+          {
+            "src": "/projects/Warehouse_project/1.avif",
+            "alt": "Warehouse project photo 1"
+          },
+          {
+            "src": "/projects/Warehouse_project/2.avif",
+            "alt": "Warehouse project photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Restaurant Interior Painting",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Restaurant",
+          "Interior",
+          "Painting"
+        ],
+        "description": "Modern color palette applied to restaurant interior walls and ceilings, improving the atmosphere for customers while ensuring easy maintenance.",
+        "timeTitle": "Time to complete:",
+        "time": "5 working days",
+        "mainImage": "/projects/Restaurant_project/1.avif",
+        "images": [
+          {
+            "src": "/projects/Restaurant_project/1.avif",
+            "alt": "Restaurant project photo 1"
+          },
+          {
+            "src": "/projects/Restaurant_project/2.avif",
+            "alt": "Restaurant project photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Modern Office Space Overhaul",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Office",
+          "Renovation",
+          "Interior",
+          "Modern"
+        ],
+        "description": "A complete redesign of a corporate office space, featuring open-plan layouts, ergonomic furniture, and contemporary design elements.",
+        "timeTitle": "Time to complete:",
+        "time": "15 working days",
+        "mainImage": "/projects/ModernOffice/1.avif",
+        "images": [
+          {
+            "src": "/projects/ModernOffice/1.avif",
+            "alt": "Modern Office photo 1"
+          },
+          {
+            "src": "/projects/ModernOffice/2.avif",
+            "alt": "Modern Office photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Luxury Hotel Lobby Redesign",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Hotel",
+          "Interior",
+          "Design",
+          "Luxury"
+        ],
+        "description": "Revamping the lobby of a luxury hotel to create an inviting and sophisticated atmosphere for guests.",
+        "timeTitle": "Time to complete:",
+        "time": "20 working days",
+        "mainImage": "/projects/HotelLobby/1.avif",
+        "images": [
+          {
+            "src": "/projects/HotelLobby/1.avif",
+            "alt": "Hotel Lobby photo 1"
+          },
+          {
+            "src": "/projects/HotelLobby/2.avif",
+            "alt": "Hotel Lobby photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Residential Home Renovation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Residential",
+          "Renovation",
+          "Interior",
+          "Modern"
+        ],
+        "description": "A full renovation of a family home, including kitchen remodel, bathroom upgrades, and living room redesign.",
+        "timeTitle": "Time to complete:",
+        "time": "30 working days",
+        "mainImage": "/projects/ResidentialHome/1.avif",
+        "images": [
+          {
+            "src": "/projects/ResidentialHome/1.avif",
+            "alt": "Residential Home photo 1"
+          },
+          {
+            "src": "/projects/ResidentialHome/2.avif",
+            "alt": "Residential Home photo 2"
+          },
+          {
+            "src": "/projects/ResidentialHome/3.avif",
+            "alt": "Residential Home photo 3"
+          }
+        ]
+      },
+      {
+        "title": "Retail Store Interior Makeover",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Retail",
+          "Interior",
+          "Design",
+          "Modern"
+        ],
+        "description": "Transforming a retail store's interior to enhance customer experience and product display.",
+        "timeTitle": "Time to complete:",
+        "time": "10 working days",
+        "mainImage": "/projects/RetailStore/1.avif",
+        "images": [
+          {
+            "src": "/projects/RetailStore/1.avif",
+            "alt": "Retail Store photo 1"
+          },
+          {
+            "src": "/projects/RetailStore/2.avif",
+            "alt": "Retail Store photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Restaurant Dining Area Redesign",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Restaurant",
+          "Interior",
+          "Design",
+          "Modern"
+        ],
+        "description": "Redesigning the dining area of a restaurant to create a more comfortable and stylish environment for diners.",
+        "timeTitle": "Time to complete:",
+        "time": "12 working days",
+        "mainImage": "/projects/RestaurantDining/1.avif",
+        "images": [
+          {
+            "src": "/projects/RestaurantDining/1.avif",
+            "alt": "Restaurant Dining photo 1"
+          },
+          {
+            "src": "/projects/RestaurantDining/2.avif",
+            "alt": "Restaurant Dining photo 2"
+          },
+          {
+            "src": "/projects/RestaurantDining/3.avif",
+            "alt": "Restaurant Dining photo 3"
+          },
+          {
+            "src": "/projects/RestaurantDining/4.avif",
+            "alt": "Restaurant Dining photo 4"
+          },
+          {
+            "src": "/projects/RestaurantDining/5.avif",
+            "alt": "Restaurant Dining photo 5"
+          },
+          {
+            "src": "/projects/RestaurantDining/6.avif",
+            "alt": "Restaurant Dining photo 6"
+          },
+          {
+            "src": "/projects/RestaurantDining/7.avif",
+            "alt": "Restaurant Dining photo 7"
+          },
+          {
+            "src": "/projects/RestaurantDining/8.avif",
+            "alt": "Restaurant Dining photo 8"
+          }
+        ]
+      },
+      {
+        "title": "Spa Center Interior Renovation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Spa",
+          "Interior",
+          "Renovation",
+          "Luxury"
+        ],
+        "description": "Renovating the interior of a spa center to enhance relaxation and comfort for guests.",
+        "timeTitle": "Time to complete:",
+        "time": "18 working days",
+        "mainImage": "/projects/SpaCenter/1.avif",
+        "images": [
+          {
+            "src": "/projects/SpaCenter/1.avif",
+            "alt": "Spa Center photo 1"
+          },
+          {
+            "src": "/projects/SpaCenter/2.avif",
+            "alt": "Spa Center photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Office Break Room Transformation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Office",
+          "Interior",
+          "Design",
+          "Modern"
+        ],
+        "description": "Transforming the office break room into a more inviting and functional space for employees.",
+        "timeTitle": "Time to complete:",
+        "time": "8 working days",
+        "mainImage": "/projects/OfficeBreak/1.avif",
+        "images": [
+          {
+            "src": "/projects/OfficeBreak/1.avif",
+            "alt": "Office Break Room photo 1"
+          },
+          {
+            "src": "/projects/OfficeBreak/2.avif",
+            "alt": "Office Break Room photo 2"
+          },
+          {
+            "src": "/projects/OfficeBreak/3.avif",
+            "alt": "Office Break Room photo 3"
+          },
+          {
+            "src": "/projects/OfficeBreak/4.avif",
+            "alt": "Office Break Room photo 4"
+          }
+        ]
+      },
+      {
+        "title": "Hotel Room Renovation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Hotel",
+          "Renovation",
+          "Interior",
+          "Modern"
+        ],
+        "description": "Renovating hotel rooms to provide guests with a more comfortable and modern stay.",
+        "timeTitle": "Time to complete:",
+        "time": "25 working days",
+        "mainImage": "/projects/HotelRoom/1.avif",
+        "images": [
+          {
+            "src": "/projects/HotelRoom/1.avif",
+            "alt": "Hotel Room photo 1"
+          },
+          {
+            "src": "/projects/HotelRoom/2.avif",
+            "alt": "Hotel Room photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Conference Room Redesign",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Office",
+          "Interior",
+          "Design",
+          "Modern"
+        ],
+        "description": "Redesigning the conference room to improve functionality and aesthetics for meetings.",
+        "timeTitle": "Time to complete:",
+        "time": "14 working days",
+        "mainImage": "/projects/ConferenceRoom/1.avif",
+        "images": [
+          {
+            "src": "/projects/ConferenceRoom/1.avif",
+            "alt": "Conference Room photo 1"
+          },
+          {
+            "src": "/projects/ConferenceRoom/2.avif",
+            "alt": "Conference Room photo 2"
+          },
+          {
+            "src": "/projects/ConferenceRoom/3.avif",
+            "alt": "Conference Room photo 3"
+          }
+        ]
+      },
+      {
+        "title": "Retail Store Facade Renovation",
+        "tagsTitle": "Services provided:",
+        "tags": [
+          "Retail",
+          "Renovation",
+          "Exterior",
+          "Modern"
+        ],
+        "description": "Renovating the exterior facade of a retail store to attract more customers and enhance brand image.",
+        "timeTitle": "Time to complete:",
+        "time": "10 working days",
+        "mainImage": "/projects/RetailFacade/1.avif",
+        "images": [
+          {
+            "src": "/projects/RetailFacade/1.avif",
+            "alt": "Retail Store Facade photo 1"
+          },
+          {
+            "src": "/projects/RetailFacade/2.avif",
+            "alt": "Retail Store Facade photo 2"
+          },
+          {
+            "src": "/projects/RetailFacade/3.avif",
+            "alt": "Retail Store Facade photo 3"
+          },
+          {
+            "src": "/projects/RetailFacade/4.avif",
+            "alt": "Retail Store Facade photo 4"
+          },
+          {
+            "src": "/projects/RetailFacade/5.avif",
+            "alt": "Retail Store Facade photo 5"
+          },
+          {
+            "src": "/projects/RetailFacade/6.avif",
+            "alt": "Retail Store Facade photo 6"
+          },
+          {
+            "src": "/projects/RetailFacade/7.avif",
+            "alt": "Retail Store Facade photo 7"
+          },
+          {
+            "src": "/projects/RetailFacade/8.avif",
+            "alt": "Retail Store Facade photo 8"
+          }
+        ]
+      }
+    ],
+    "filteredByTag": "Showing results for - {{tag}}",
+    "backToProjects": "Back to projects"
+  }
 }
