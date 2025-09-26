@@ -480,5 +480,6 @@
         { "src": "/projects/RetailFacade/8.avif", "alt": "Retail Store Facade photo 8" }
       ]
     }
-  ]
+  ],
+  "filteredByTag": "Showing results for #{{tag}}"
 }
