@@ -1,8 +1,15 @@
-const TagButton = ({ tag, onClick }) => (
+const TagButton = ({ tag, onClick, active }) => (
   <button
-    onClick={() => onClick?.(tag)}
-    className="px-3 py-1 rounded-full text-sm lg:text-base bg-gray-200 text-gray-800 
-               hover:bg-accent hover:text-white transition-colors mx-1 my-1 shadow-sm"
+    type="button"
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick?.(tag);
+    }}
+    className={`px-3 py-1 rounded-full text-sm lg:text-base mx-1 my-1 shadow-sm border-2
+      ${active 
+        ? "border-accent text-neutral bg-transparent" 
+        : "border-gray-200 bg-gray-200 text-gray-800 hover:border-accent hover:text-neutral transition-colors"
+      }`}
   >
     #{tag}
   </button>
