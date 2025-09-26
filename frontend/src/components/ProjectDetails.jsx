@@ -75,7 +75,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
                 </h2>
             </div>
 
-            <p className="text-lg lg:text-2xl leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-accent border-2 rounded-lg">
+            <p className="text-lg lg:text-2xl leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-neutral border-2 rounded-lg">
                 {project.description}
             </p>
 
@@ -108,17 +108,17 @@ const ProjectDetails = ({ project, onTagClick }) => {
                 </div>
 
                 {/* Dots */}
-                <div className="block md:hidden mt-3 flex justify-center items-center gap-2">
+                <div className="md:hidden mt-3 flex justify-center items-center gap-2">
                     {project.images.map((_, i) => (
                         <button
                             key={i}
                             aria-label={`Go to image ${i + 1}`}
                             onClick={() => goTo(i)}
-                            className={`w-2 h-2 rounded-full transition-all ${i === page.index ? "bg-accent w-3 h-3" : "bg-white bg-opacity-40"}`}
+                            className={`w-3 h-3 rounded-full transition-all border-2 flex items-center justify-center border-neutral
+                            ${i === page.index ? "bg-neutral" : "bg-transparent"}`}
                         />
                     ))}
                 </div>
-
                 {/* Desktop grid */}
                 <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                     {project.images.map((img, index) => (
