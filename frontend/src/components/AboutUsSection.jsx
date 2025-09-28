@@ -18,11 +18,11 @@ const AboutUsSection = () => {
   return (
     <div className="min-h-screen overflow-hidden pb-20 font-bn text-primary">
       {/* Intro */}
-      <div className="relative flex flex-col md:flex-row  items-start w-[90vw] justify-center justify-self-center gap-10">
+      <div className="relative flex flex-col md:flex-row items-start w-[90vw] justify-center justify-self-center gap-10">
         <motion.img
           src="./aboutUs-solo.jpg"
           alt="About us"
-          className="w-screen  md:w-1/2 max-h-[60vh] object-cover rounded-3xl shadow-xl border-4 border-secondary"
+          className="w-screen md:w-1/2 max-h-[40vh] lg:max-h-[70vh] object-cover rounded-3xl shadow-xl border-4 border-secondary"
           variants={isDesktop ? heroDesktopVariants : heroMobileVariants}
           initial="hidden"
           whileInView="show"
@@ -30,7 +30,7 @@ const AboutUsSection = () => {
         />
 
         <motion.div
-          className="lg:w-1/2 bg-secondary p-8 lg:p-12 rounded-3xl shadow-md border-4 border-neutral"
+          className="lg:w-1/2 bg-secondary p-8 lg:p-12 lg:min-h-[70vh] rounded-3xl shadow-md border-4 border-neutral"
           variants={isDesktop ? heroDesktopVariants : heroMobileVariants}
           initial="hidden"
           whileInView="show"
