@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import ProjectCard from "../components/ProjectCard.jsx";
 import ProjectDetails from "../components/ProjectDetails.jsx";
 import ProjectPagination from "../components/ProjectPagination.jsx";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
@@ -70,9 +71,9 @@ const ProjectsPage = () => {
         <div>
           <button
             onClick={handleBackToProjects}
-            className="mb-6 px-4 py-2 bg-white border-2 border-accent rounded-lg text-neutral hover:bg-neutral hover:text-white transition"
+            className="text-2xl flex mb-6 px-4 py-2 gap-2 bg-white text-neutral hover:underline hover:underline-offset-8 hover:text-accent transition"
           >
-            {t("projects.backToProjects")}
+            <IoArrowBackSharp className="text-3xl place-self-center"/>{t("projects.backToProjects")}
           </button>
           <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
         </div>
