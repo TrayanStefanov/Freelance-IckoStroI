@@ -11,7 +11,7 @@ const Slogan = () => {
 
   return (
     <motion.div
-      className="text-center text-3xl sm:text-4xl text-neutral py-8 italic px-4"
+      className="text-center text-4xl sm:text-5xl text-neutral py-8 px-4"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
