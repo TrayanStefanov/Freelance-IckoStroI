@@ -44,11 +44,11 @@ const Contacts = () => {
           initial="hidden"
           animate="show"
         >
-          <h1 className="text-5xl lg:text-7xl mb-6">{t("contacts.title")}</h1>
-          <p className="text-3xl max-w-[80vw]">{t("contacts.text.normal")}</p>
-          <b className="mb-6 ml-2 text-4xl text-neutral">
+          <h1 className="text-5xl lg:text-7xl">{t("contacts.title")}</h1>
+          <b className="my-8 ml-2 text-4xl text-neutral">
             {t("contacts.text.bold1")}, {t("contacts.text.bold2")} {t("contacts.text.bold3")}
           </b>
+          <p className="text-3xl max-w-[80vw] mb-6">{t("contacts.text.normal")}</p>
 
           <motion.div
             className="flex flex-col gap-6 w-full max-w-lg"
