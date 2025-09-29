@@ -57,9 +57,9 @@ const ProjectDetails = ({ project, onTagClick }) => {
                 onClick={() => setSelectedImage({ src: project.mainImage, alt: project.title })}
             />
 
-            <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center">{project.title}</h1>
+            <h1 className="text-5xl lg:text-6xl font-semibold my-10 mx-6 text-center font-pf">{project.title}</h1>
             <div className="flex justify-between mx-6">
-                <h2 className="text-3xl lg:text-4xl">
+                <h2 className="text-3xl lg:text-4xl font-ms">
                     {project.tagsTitle}
                     <div className="text-xl lg:text-2xl flex flex-wrap mt-4">
                         {project.tags.map((tag, i) => (
@@ -67,7 +67,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
                         ))}
                     </div>
                 </h2>
-                <h2 className="text-3xl lg:text-4xl">
+                <h2 className="text-3xl lg:text-4xl font-ms">
                     {project.timeTitle}
                     <div className="text-xl lg:text-2xl text-right mt-4">
                         {project.time}
@@ -75,7 +75,7 @@ const ProjectDetails = ({ project, onTagClick }) => {
                 </h2>
             </div>
 
-            <p className="text-lg lg:text-2xl leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-neutral border-2 rounded-lg">
+            <p className="text-lg lg:text-2xl leading-relaxed indent-4 p-10 mx-6 my-10 block whitespace-normal border-neutral border-2 rounded-lg font-ns">
                 {project.description}
             </p>
 

@@ -15,10 +15,10 @@ const ProjectCard = ({ project, onSelect, onTagClick, tagFilter }) => (
             className="w-full h-60 object-cover"
         />
         <div className="p-4">
-            <h3 className="text-lg font-semibold">{project.title}</h3>
+            <h3 className="text-2xl indent-2 font-pf font-semibold">{project.title}</h3>
             <p className="text-sm text-gray-600">{project.time}</p>
 
-            <div className="flex flex-wrap mt-2">
+            <div className="flex flex-wrap mt-2 font-ms">
                 {project.tags.slice(0, 5).map((tag, i) => (
                     <TagButton
                         key={i}

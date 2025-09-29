@@ -11,7 +11,7 @@ const TagButton = ({ tag, onClick, active }) => (
         : "border-gray-200 bg-gray-200 text-gray-800 hover:border-accent hover:text-neutral transition-colors"
       }`}
   >
-    #{tag}
+    # {tag}
   </button>
 );
 
