@@ -85,7 +85,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Nav Links */}
-                <div className="navbar-end w-[70vw] hidden md:flex xl:me-20 2xl:me-40">
+                <div className="navbar-end w-[70vw] hidden md:flex xl:me-20 2xl:me-40 font-pf">
                     <motion.ul
                         className="menu menu-horizontal md:text-l lg:text-xl text-primary items-center relative"
                         initial="hidden"

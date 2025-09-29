@@ -25,9 +25,9 @@ const Footer = () => {
                     </div>
                     <aside className="self-center flex flex-col justify-around md:gap-2">
                         <div className="flex flex-col gap-1 sm:gap-2 md:gap-3 justify-center">
-                            <p className="flex flex-row text-center items-center text-xs md:text-xl lg:text-3xl indent-2 justify-center"><FiPhoneCall className="text-neutral text-lg md:text-2xl" />{t("footer.phone")}</p>
+                            <p className="flex flex-row text-center items-center text-xs md:text-xl lg:text-3xl indent-2 justify-center font-pf"><FiPhoneCall className="text-neutral text-lg md:text-2xl" />{t("footer.phone")}</p>
                             <p className="flex flex-row text-center items-center text-xs md:text-xl lg:text-3xl indent-2 justify-center"><FiMail className="text-neutral text-lg md:text-2xl" />
-                                <a href={`mailto:${email}`}>
+                                <a href={`mailto:${email}`} className="font-pf">
                                     {email}
                                 </a>
                             </p>
@@ -42,7 +42,7 @@ const Footer = () => {
                         </div>
                     </aside>
                 </div>
-                <p className="justify-self-center self-center text-s mb-2 md:text-xl lg:hidden">{t("footer.slogan")}</p>
+                <p className="justify-self-center self-center text-s mb-2 md:text-xl lg:hidden font-ns">{t("footer.slogan")}</p>
             </footer>
         </div>
     )
