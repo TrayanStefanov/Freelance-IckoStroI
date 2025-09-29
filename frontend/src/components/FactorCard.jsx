@@ -23,10 +23,10 @@ const FactorCard = ({ factor, idx, isDesktop, variants }) => {
       whileHover={isDesktop ? { scale: 1.03 } : {}}
     >
       {/* Always visible */}
-      <h6 className="text-xl lg:text-2xl font-bold mb-3 underline underline-offset-8 decoration-primary-content text-neutral drop-shadow-sm">
+      <h6 className="text-xl lg:text-2xl font-bold mb-3 underline underline-offset-8 decoration-primary-content text-neutral drop-shadow-sm font-ms">
         {factor.title}
       </h6>
-      <p className="text-base">{factor.text}</p>
+      <p className="text-base font-ns">{factor.text}</p>
 
       {/* Expandable details */}
       <AnimatePresence>
@@ -37,7 +37,7 @@ const FactorCard = ({ factor, idx, isDesktop, variants }) => {
             animate={{ opacity: 1, maxHeight: 500, transition: { duration: 0.35, ease: "easeInOut" } }}
             exit={{ opacity: 0, maxHeight: 0, transition: { duration: 0.35, ease: "easeInOut" } }}
           >
-            <ul className="space-y-1">
+            <ul className="space-y-1 font-ns">
               {factor.details.map((point, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm">
                   <GiCheckMark className="text-accent min-w-4 min-h-4" />

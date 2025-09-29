@@ -36,12 +36,12 @@ const AboutUsSection = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-4xl lg:text-5xl font-bold text-neutral mb-6">{t("about.intro.title")}</h1>
-          <p className="text-lg leading-relaxed mb-4">{t("about.intro.paragraph.1")}</p>
-          <p className="text-lg leading-relaxed mb-6">{t("about.intro.paragraph.2")}</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-neutral mb-6 font-pf">{t("about.intro.title")}</h1>
+          <p className="text-lg leading-relaxed mb-4 font-ns">{t("about.intro.paragraph.1")}</p>
+          <p className="text-lg leading-relaxed mb-6 font-ns">{t("about.intro.paragraph.2")}</p>
 
-          <h3 className="text-2xl lg:text-3xl text-neutral mb-4">{t("about.intro.subtitle")}</h3>
-          <ul className="space-y-2">
+          <h3 className="text-4xl lg:text-5xl font-bold text-neutral mb-6 font-pf">{t("about.intro.subtitle")}</h3>
+          <ul className="space-y-2 text-lg font-ns">
             {[t("about.intro.points.1"), t("about.intro.points.2"), t("about.intro.points.3"), t("about.intro.points.4")].map((point, idx) => (
               <li key={idx} className="flex items-center gap-2">
                 <GiCheckMark className="text-accent text-xl min-h-5 min-w-5 transition-colors hover:text-neutral hover:scale-120" />
@@ -54,7 +54,7 @@ const AboutUsSection = () => {
 
       {/* Issues */}
       <div className="mt-12 w-[90vw] mx-auto">
-        <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mt-24 mb-12">{t("about.issues.title")}</h2>
+        <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mt-24 mb-12 font-pf">{t("about.issues.title")}</h2>
         <div className="min-w-[90vw] place-self-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {factors.map((factor, idx) => (
             <FactorCard

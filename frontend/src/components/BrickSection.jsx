@@ -16,7 +16,7 @@ const BrickSection = () => {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row justify-center items-center text-3xl sm:text-4xl text-neutral gap-6 md:gap-12 px-4 md:px-0 pb-12"
+      className="flex flex-col md:flex-row justify-center items-center text-3xl sm:text-4xl text-neutral gap-6 md:gap-12 px-4 md:px-0 pb-12 font-ms"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
