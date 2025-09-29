@@ -44,7 +44,7 @@ const Services = () => {
   if (!servicesList || !Array.isArray(servicesList)) return null;
 
   return (
-    <div className="font-bn">
+    <div className="font-pf">
       <div className="relative min-h-[80vh] lg:min-h-screen overflow-hidden flex items-center justify-center">
 
         {/* Static Background */}
@@ -81,7 +81,7 @@ const Services = () => {
 
           {/* Subtitle fade-in */}
           <motion.h2
-            className="text-2xl sm:text-3xl lg:text-4xl max-w-4xl leading-snug"
+            className="text-2xl sm:text-3xl lg:text-4xl max-w-4xl leading-snug font-ms"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.8 }}
@@ -91,7 +91,7 @@ const Services = () => {
 
           {/* "More" slide-up */}
           <motion.h3
-            className="text-xl sm:text-2xl lg:text-3xl max-w-4xl font-light"
+            className="text-xl sm:text-2xl lg:text-3xl max-w-4xl font-light font-ms"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.2, duration: 0.8 }}
@@ -131,10 +131,10 @@ const Services = () => {
                       viewport={{ once: true, amount: 0.3 }}
                     >
                       <div>
-                        <h3 className="font-bold text-lg xl:text-2xl">{service.left.title}</h3>
-                        <h3 className="italic indent-4 mt-4 text-md xl:text-xl">{service.left.text}</h3>
+                        <h3 className="font-bold text-lg xl:text-2xl font-ms">{service.left.title}</h3>
+                        <h3 className="indent-4 mt-4 text-md xl:text-xl font-ns-italic">{service.left.text}</h3>
                       </div>
-                      <p className="text-md xl:text-xl">{service.left.description}</p>
+                      <p className="text-md xl:text-xl font-ns">{service.left.description}</p>
                     </motion.div>
                   </div>
 
@@ -147,7 +147,7 @@ const Services = () => {
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      <ul className="list-disc ml-4 text-md xl:text-xl">
+                      <ul className="list-disc ml-4 text-md xl:text-xl font-ns">
                         {service.right.tasks.map((task, i) => (
                           <li key={i}>{task}</li>
                         ))}
@@ -168,7 +168,7 @@ const Services = () => {
               className="collapse collapse-arrow join-item border-base-300 border border-l-0 border-r-0 bg-  text-primary"
             >
               <input type="checkbox" />
-              <div className="collapse-title text-xl font-medium flex items-center gap-3">
+              <div className="collapse-title text-xl font-medium flex items-center gap-3 font-pf">
                 <img
                   src={service.image}
                   alt={service.left.title}
@@ -181,13 +181,13 @@ const Services = () => {
                   src={service.image}
                   className="object-contain rounded-md mb-4"
                 />
-                <p className="indent-4 mb-4">{service.left.description}</p>
+                <p className="indent-4 mb-4 font-ns">{service.left.description}</p>
                 <ul className="list-disc ml-4 indent-4 list-inside">
                   {service.right.tasks.map((task, i) => (
                     <li key={i}>{task}</li>
                   ))}
                 </ul>
-                <p className="indent-4 mt-4">{service.right.text}</p>
+                <p className="indent-4 mt-4 font-ns-italic">{service.left.text}</p>
               </div>
             </div>
           ))}
