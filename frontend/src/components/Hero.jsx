@@ -59,36 +59,19 @@ const Hero = () => {
         </motion.h3>
 
         {/* Buttons Desktop */}
-        <div className="hidden lg:flex gap-4 mt-6">
+        <div className="flex flex-col lg:flex-row gap-4 mt-6">
           <motion.div initial="hiddenLeft" animate="visible" whileHover="hover" variants={buttonVariants}>
-            <Link to="/projects" className="btn btn-primary btn-wide rounded-l-lg border border-secondary text-secondary text-xl">
+            <Link to="/projects" className="btn btn-accent opacity-50 btn-wide rounded-r-lg border border-accent text-secondary text-xl hover:opacity-100 hover:border-neutral">
               {t("home.btnprojects")}
             </Link>
           </motion.div>
           <motion.div initial="hiddenRight" animate="visible" whileHover="hover" variants={buttonVariants}>
-            <Link to="/services" className="btn btn-primary btn-wide rounded-r-lg border border-secondary text-secondary text-xl">
+            <Link to="/services" className="btn btn-accent opacity-50 btn-wide rounded-r-lg border-2 border-accent text-secondary text-xl hover:opacity-100 hover:border-neutral">
               {t("home.btnservices")}
             </Link>
           </motion.div>
         </div>
 
-        {/* Buttons Mobile */}
-        <div className="flex flex-col lg:hidden w-full mt-6 gap-4">
-          <Link
-            to="/projects"
-            className="btn btn-primary w-full h-20 sm:h-24 rounded-lg text-2xl sm:text-3xl font-bold shadow-lg"
-            style={{ backgroundImage: "url(/home-projects-btn.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-          >
-            {t("home.btnprojects")}
-          </Link>
-          <Link
-            to="/services"
-            className="btn btn-primary w-full h-20 sm:h-24 rounded-lg text-2xl sm:text-3xl font-bold shadow-lg"
-            style={{ backgroundImage: "url(/home-services-btn.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-          >
-            {t("home.btnservices")}
-          </Link>
-        </div>
       </div>
     </div>
   );
