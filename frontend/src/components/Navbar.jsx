@@ -94,7 +94,7 @@ const Navbar = () => {
                     >
                         {[
                             { path: "/", label: t("navbar.home") },
-                            { path: "/about", label: t("navbar.about") },
+                            /* { path: "/about", label: t("navbar.about") }, */ //temporary disabled
                             { path: "/projects", label: t("navbar.projects") },
                             { path: "/services", label: t("navbar.services") },
                             { path: "/contacts", label: t("navbar.contacts") },
@@ -204,7 +204,7 @@ const Navbar = () => {
                                 >
                                     {[
                                         { path: "/", label: t("navbar.home") },
-                                        { path: "/about", label: t("navbar.about") },
+                                        /* { path: "/about", label: t("navbar.about") }, */ //temporary disabled
                                         { path: "/projects", label: t("navbar.projects") },
                                         { path: "/services", label: t("navbar.services") },
                                         { path: "/contacts", label: t("navbar.contacts") },
