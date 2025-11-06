@@ -14,3 +14,5 @@ i18next.use(Backend).use(LanguageDetector).use(initReactI18next).init({
     caches: ["localStorage"],
   } 
 });
+
+export default i18next;

@@ -20,7 +20,7 @@ const AboutUsSection = () => {
       {/* Intro */}
       <div className="relative flex flex-col md:flex-row items-start w-[90vw] justify-center justify-self-center gap-10">
         <motion.img
-          src="./aboutUs-solo.jpg"
+          src="./about.avif"
           alt="About us"
           className="w-screen md:w-1/2 max-h-[40vh] lg:max-h-[70vh] object-cover rounded-3xl shadow-xl border-4 border-secondary"
           variants={isDesktop ? heroDesktopVariants : heroMobileVariants}

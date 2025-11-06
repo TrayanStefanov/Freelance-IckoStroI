@@ -1,14 +1,20 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Contacts = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const baseUrl = "https://itskovstroy.com";
+  const [loadMap, setLoadMap] = useState(false);
 
-  const emailUser = "example";
-  const emailDomain = "example.eu";
-  const email = `${emailUser}@${emailDomain}`;
+  const emailUser1 = t("footer.email.value1");
+  const emailUser2 = t("footer.email.value2");
+  const emailDomain = "gmail.com";
+  const email = `${emailUser1}${emailUser2}@${emailDomain}`;
 
   // Detect screen size
   const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
@@ -35,8 +41,50 @@ const Contacts = () => {
 
   return (
     <div className="overflow-hidden pt-[15vh] min-h-[80vh] font-pf text-primary content-center">
-      <div className="flex flex-col lg:flex-row bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
+      {/*SEO META DATA */}
+      <Helmet>
+        <html lang={lang} />
+        <title>{t("site.pages.contacts.title")}</title>
+        <meta
+          name="description"
+          content={t("site.pages.contacts.description")}
+        />
+        <meta name="keywords" content={t("site.pages.contacts.keywords")} />
+        <meta name="author" content={t("site.author")} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={t("site.pages.contacts.canonical")} />
+        <link rel="alternate" href="https://itskovstroy.com/" hreflang="en" />
+        <link rel="alternate" href="https://itskovstroy.com/bg" hreflang="bg" />
 
+        {/* --- Open Graph --- */}
+        <meta property="og:type" content={t("site.og.type")} />
+        <meta property="og:site_name" content={t("site.og.site_name")} />
+        <meta property="og:title" content={t("site.pages.contacts.title")} />
+        <meta
+          property="og:description"
+          content={t("site.pages.contacts.description")}
+        />
+        <meta property="og:url" content={t("site.pages.contacts.canonical")} />
+        <meta property="og:image" content={t("site.og.image")} />
+        <meta property="og:image:alt" content={t("site.og.image_alt")} />
+
+        {/* --- Twitter --- */}
+        <meta name="twitter:card" content={t("site.twitter.card")} />
+        <meta name="twitter:site" content={t("site.twitter.handle")} />
+        <meta name="twitter:title" content={t("site.pages.contacts.title")} />
+        <meta
+          name="twitter:description"
+          content={t("site.pages.contacts.description")}
+        />
+        <meta name="twitter:image" content={t("site.og.image")} />
+
+        {/* --- Schema.org JSON-LD --- */}
+        <script type="application/ld+json">
+          {JSON.stringify(t("site.organization", { returnObjects: true }))}
+        </script>
+      </Helmet>
+
+      <div className="flex flex-col lg:flex-row bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
         {/* Contact details */}
         <motion.div
           className="min-h-[40vh] lg:w-1/2 text-center flex flex-col justify-center items-center p-6"
@@ -44,11 +92,16 @@ const Contacts = () => {
           initial="hidden"
           animate="show"
         >
-          <h1 className="text-5xl lg:text-7xl font-bold">{t("contacts.title")}</h1>
-          <b className="my-8 ml-2 text-4xl text-neutral font-ms font-black">
-            {t("contacts.text.bold1")}, {t("contacts.text.bold2")} {t("contacts.text.bold3")}
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold">
+            {t("contacts.title")}
+          </h1>
+          <b className="my-8 ml-2 text-2xl lg:text-3xl xl:text-4xl text-neutral font-ms font-black">
+            {t("contacts.text.bold1")}, {t("contacts.text.bold2")}{" "}
+            {t("contacts.text.bold3")}
           </b>
-          <p className="text-3xl max-w-[80vw] mb-6 font-ns">{t("contacts.text.normal")}</p>
+          <p className="text-lg lg:text-2xl xl:text-3xl max-w-[80vw] mb-6 font-ns">
+            {t("contacts.text.normal")}
+          </p>
 
           <motion.div
             className="flex flex-col gap-6 w-full max-w-lg"
@@ -56,16 +109,24 @@ const Contacts = () => {
             initial="hidden"
             animate="show"
           >
-            <motion.h2 className="text-2xl lg:text-4xl flex items-center justify-center font-pf" variants={itemVariants}>
+            <motion.h2
+              className="text-lg lg:text-2xl xl:text-3xl flex items-center justify-center font-pf"
+              variants={itemVariants}
+            >
               <FiPhoneCall className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.phone.note")}</b>
               {t("contacts.phone.value")}
             </motion.h2>
 
-            <motion.h2 className="text-2xl lg:text-4xl flex items-center justify-center font-pf" variants={itemVariants}>
+            <motion.h2
+              className="text-lg lg:text-2xl xl:text-3xl flex items-center justify-center font-pf"
+              variants={itemVariants}
+            >
               <FiMail className="mx-2 text-neutral" />
               <b className="mx-2">{t("contacts.email.note")}</b>
-              <a href={`mailto:${email}`} className="hover:underline break-all">{email}</a>
+              <a href={`mailto:${email}`} className="hover:underline break-all">
+                {email}
+              </a>
             </motion.h2>
           </motion.div>
         </motion.div>
@@ -77,16 +138,21 @@ const Contacts = () => {
           initial="hidden"
           animate="show"
         >
-          <iframe
-            title="Business area"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93836.37935954207!2d23.241546740875236!3d42.69552878928868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia!5e0!3m2!1sen!2sbg!4v1755696992586!5m2!1sen!2sbg"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          {loadMap ? (
+            <iframe
+              title="Business area"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93836.37935954207!2d23.241546740875236!3d42.69552878928868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia!5e0!3m2!1sen!2sbg!4v1755696992586!5m2!1sen!2sbg"
+              loading="lazy"
+              style={{ border: 0 }}
+              width="100%"
+              height="100%"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          ) : (
+            <div className="w-full h-[300px] bg-gray-100 flex items-center justify-center text-gray-500">
+              Loading map…
+            </div>
+          )}
         </motion.div>
       </div>
     </div>

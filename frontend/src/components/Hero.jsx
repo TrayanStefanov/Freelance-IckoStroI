@@ -17,9 +17,24 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-[80vh] lg:min-h-screen overflow-hidden flex items-center justify-center">
-      {/* Background */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/home-hero.jpg)" }} />
-      <motion.div className="absolute inset-0 bg-neutral/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} />
+      <img
+        src="/home-hero.avif"
+        alt="ITSKOV STROY — Renovation and Construction in Sofia"
+        fetchpriority="high"  
+        loading="eager"
+        decoding="async"
+        width="1920"
+        height="1080"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+
+      {/* Overlay */}
+      <motion.div
+        className="absolute inset-0 bg-neutral/50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center text-neutral-content flex flex-col items-center justify-center h-full p-6 md:p-12 lg:p-20 gap-6">
@@ -61,17 +76,22 @@ const Hero = () => {
         {/* Buttons Desktop */}
         <div className="flex flex-col lg:flex-row gap-4 mt-6">
           <motion.div initial="hiddenLeft" animate="visible" whileHover="hover" variants={buttonVariants}>
-            <Link to="/projects" className="btn btn-accent opacity-50 btn-wide rounded-r-lg border border-accent text-secondary text-xl hover:opacity-100 hover:border-neutral">
+            <Link
+              to="/projects"
+              className="btn btn-accent btn-wide rounded-r-lg border-2 border-neutral text-secondary text-xl hover:btn-neutral hover:border-accent hover:border-4"
+            >
               {t("home.btnprojects")}
             </Link>
           </motion.div>
           <motion.div initial="hiddenRight" animate="visible" whileHover="hover" variants={buttonVariants}>
-            <Link to="/services" className="btn btn-accent opacity-50 btn-wide rounded-r-lg border-2 border-accent text-secondary text-xl hover:opacity-100 hover:border-neutral">
+            <Link
+              to="/services"
+              className="btn btn-accent btn-wide rounded-r-lg border-2 border-neutral text-secondary text-xl hover:btn-neutral hover:border-accent hover:border-4"
+            >
               {t("home.btnservices")}
             </Link>
           </motion.div>
         </div>
-
       </div>
     </div>
   );
