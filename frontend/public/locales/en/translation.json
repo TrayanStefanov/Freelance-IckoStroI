@@ -1,9 +1,63 @@
 {
   "site": {
-    "title": "Itskov Stroy - Renovations and Repairs in Sofia",
-    "description": "Itskov Stroy offers professional renovation and repair services for homes, offices, and buildings. Fast. Easy. High Quality.",
-    "keywords": "renovation, construction, repair services, Itskov Stroy, home renovation, bathroom repair, painting, drywall, plastering, Sofia, building company",
-    "author": "Aleksandar Ickov"
+    "title": "ITSKOV STROY Ltd. - Renovations and Repairs in Sofia",
+    "description": "ITSKOV STROY Ltd. offers professional renovation and repair services for homes, offices, and buildings. Fast. Easy. High Quality.",
+    "keywords": "renovation, construction, repair services, ITSKOV STROY Ltd., home renovation, bathroom repair, painting, drywall, plastering, Sofia, building company",
+    "author": "Aleksandar Ickov",
+    "og": {
+      "type": "website",
+      "site_name": "ITSKOV STROY Ltd.",
+      "image": "https://itskovstroy.com/og-image.jpg",
+      "image_alt": "ITSKOV STROY Ltd. Renovations in Sofia"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "handle": "@itskovstroy"
+    },
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ITSKOV STROY Ltd.",
+      "url": "https://itskovstroy.com",
+      "logo": "https://itskovstroy.com/logo192.png",
+      "description": "Professional renovation and repair services for homes, offices, and commercial properties in Sofia.",
+      "sameAs": [
+        "https://www.facebook.com/itskovstroy",
+        "https://www.instagram.com/itskovstroy",
+        "https://www.linkedin.com/company/itskovstroy"
+      ]
+    },
+    "pages": {
+      "home": {
+        "title": "Home Renovations in Sofia | ITSKOV STROY Ltd.",
+        "description": "Expert renovation services for homes and businesses in Sofia. Trust, Quality, and Professionalism in every project.",
+        "keywords": "home renovation Sofia, apartment renovation Sofia, trusted renovation company",
+        "canonical": "https://itskovstroy.com/"
+      },
+      "services": {
+        "title": "Renovation and Repair Services in Sofia | ITSKOV STROY Ltd.",
+        "description": "Professional renovation, painting, drywall, and electrical services in Sofia. Reliable results and excellent quality.",
+        "keywords": "renovation services Sofia, painting, drywall, electrical repairs",
+        "canonical": "https://itskovstroy.com/services"
+      },
+      "projects": {
+        "title": "Completed Renovation Projects in Sofia | ITSKOV STROY Ltd.",
+        "description": "Explore our renovation projects in Sofia — from residential to commercial spaces. Proven quality and precision.",
+        "keywords": "renovation projects Sofia, completed works, portfolio",
+        "canonical": "https://itskovstroy.com/projects"
+      },
+      "contacts": {
+        "title": "Contact Itskov Stroy | Renovations & Construction in Sofia",
+        "description": "Get in touch with Itskov Stroy — trusted renovation and construction professionals in Sofia. Call or email us for a free consultation.",
+        "keywords": "contact renovation company Sofia, Itskov Stroy contact, construction Sofia, renovation services Bulgaria",
+        "canonical": "https://itskovstroy.com/contacts"
+      },
+      "404": {
+        "title": "404 Page Not Found | ITSKOV STROY Ltd.",
+        "description": "The page you’re looking for doesn’t exist. Return to our homepage for renovation and repair services in Sofia.",
+        "canonical": "https://itskovstroy.com/"
+      }
+    }
   },
   "navbar": {
     "logo": "/logo_en_nobg.png",
@@ -15,13 +69,16 @@
   },
   "footer": {
     "phone": "+359 87 962 9072",
-    "email": "example@example.eu",
+    "email": {
+      "value1": "itskov",
+      "value2": "stroy"
+    },
     "slogan": "Contact us - and your home will thank you!",
     "social": "Socials",
     "social-links": {
-      "linkedin": "https://www.linkedin.com/",
-      "facebook": "https://www.facebook.com/",
-      "instagram": "https://www.instagram.com/"
+      "linkedin": "https://www.linkedin.com/company/itskov-stroy-ltd",
+      "facebook": "https://www.facebook.com/share/1BvWYduzfo/?mibextid=wwXIfr",
+      "instagram": "https://www.instagram.com/itskovstroy/"
     }
   },
   "language": {
@@ -30,7 +87,7 @@
   },
   "home": {
     "title": "Who Are We?",
-    "subtitle": "Itskov Stroy is a renovation and remodeling company with a clear focus: professional and high-quality execution of your construction projects - from small improvements to complete transformations.",
+    "subtitle": "ITSKOV STROY Ltd. is a renovation and remodeling company with a clear focus: professional, high-quality execution of your construction projects - from small improvements to complete transformations",
     "more": "Learn more about our:",
     "btnprojects": "Projects",
     "btnservices": "Services",
@@ -43,19 +100,19 @@
     "intro": {
       "title": "About Us",
       "paragraph": {
-        "1": "Itskov Stroy Ltd. is a company focused on quality interior renovations, founded with a clear mission - to restore trust in reliable and responsible construction.",
+        "1": "ITSKOV STROY Ltd. is a company focused on quality interior renovations, founded with a clear mission - to restore trust in reliable and responsible construction.",
         "2": "We work with both individuals and businesses alike, offering a full range of services for apartments, houses, and commercial properties."
       },
       "subtitle": "What differentiates us?",
       "points": {
         "1": "In a world where 'renovation' is often associated with delays, compromises, and unnecessary stress - we choose a different path.",
-        "2": "A find a team that works with responsibility, dedication, and a personal approach.",
+        "2": "A team that works with responsibility, dedication, and a personal approach.",
         "3": "We don't make promises we can't keep.",
         "4": "We value clear communication, honesty, and the highest quality in every service we provide."
       }
     },
     "issues": {
-      "title": "Why Choose US?",
+      "title": "Why Choose Us?",
       "factors": {
         "1": {
           "title": "Your Time is Money",
@@ -106,7 +163,7 @@
       "text": "We offer flexible and high-quality solutions for home and office. From small improvements to complete renovations - we are with you every step of the way.",
       "text2": "Explore our services below."
     },
-    "listTitle": "What services do we offer:",
+    "listTitle": "What services do we offer?",
     "serviceList": [
       {
         "left": {
@@ -127,7 +184,7 @@
       {
         "left": {
           "title": "Electrical Services",
-          "description": "We work according to all safety standards and with the required documentation. We provide:",
+          "description": "We follow all safety standards and provide the required documentation. We provide:",
           "text": "Safety, functionality, and good aesthetics - that's our standard."
         },
         "right": {
@@ -185,7 +242,7 @@
             "Proper finishing of corners, trims, and transitions"
           ]
         },
-        "image": "/services-floor-laminate.jpg"
+        "image": "/services-floor-tiles.jpg"
       },
       {
         "left": {
@@ -217,7 +274,7 @@
             "Repair of cracks, uneven areas, and other defects"
           ]
         },
-        "image": "/services-thermall.jpg"
+        "image": "/services-plastering.png"
       },
       {
         "left": {
@@ -233,7 +290,7 @@
             "Proper preparation for all types of flooring - tiles, parquet, laminate, vinyl"
           ]
         },
-        "image": "/services-thermall.jpg"
+        "image": "/services-floor-screed.webp"
       }
     ]
   },
@@ -254,7 +311,9 @@
       "value": "+359 87 962 9072"
     },
     "email": {
-      "note": "Email:"
+      "note": "Email:",
+      "value1": "itskov",
+      "value2": "stroy"
     }
   },
   "404page": {
@@ -264,7 +323,7 @@
     "btn": "Go to HomePage"
   },
   "projects": {
-    "title": "Browse our projects",
+    "title": "Explore Our Projects",
     "allProjects": [
       {
         "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
