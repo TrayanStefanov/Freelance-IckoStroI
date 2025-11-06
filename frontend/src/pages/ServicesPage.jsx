@@ -37,7 +37,6 @@ const Services = () => {
   const { t, i18n } = useTranslation();
   const servicesList = t("services.serviceList", { returnObjects: true });
   const lang = i18n.language;
-  const baseUrl = "https://itskovstroy.com";
 
   const letterVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
   const titleLetters = t("services.intro.title").split("");
@@ -53,8 +52,6 @@ const Services = () => {
         <meta name="keywords" content={t("site.pages.services.keywords")} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={t("site.pages.services.canonical")} />
-        <link rel="alternate" href={`${baseUrl}/services`} hreflang="en" />
-        <link rel="alternate" href={`${baseUrl}/bg/services`} hreflang="bg" />
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content={t("site.og.type")} />

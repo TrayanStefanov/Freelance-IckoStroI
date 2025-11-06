@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-[80vh] lg:min-h-screen overflow-hidden flex items-center justify-center">
       <img
-        src="/home-hero.avif"
+        src="/home-hero.jpg"
         alt="ITSKOV STROY — Renovation and Construction in Sofia"
         fetchpriority="high"  
         loading="eager"

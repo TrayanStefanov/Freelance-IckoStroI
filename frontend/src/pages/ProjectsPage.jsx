@@ -78,8 +78,6 @@ const ProjectsPage = () => {
         <meta name="keywords" content={t("site.pages.projects.keywords")} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={t("site.pages.projects.canonical")} />
-        <link rel="alternate" href={`${baseUrl}/services`} hreflang="en" />
-        <link rel="alternate" href={`${baseUrl}/bg/services`} hreflang="bg" />
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content={t("site.og.type")} />

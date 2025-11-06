@@ -3,14 +3,18 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // ✅ ensures correct relative paths for cPanel/static hosting
+  base: './',
   build: {
-    target: "esnext",
-    minify: "esbuild",
+    target: 'es2018', 
+    minify: 'esbuild',
+    cssCodeSplit: true, 
     rollupOptions: {
       output: {
-        manualChunks: undefined
-      }
-    }
-  }
+        manualChunks: undefined,
+      },
+    },
+  },
+  esbuild: {
+    drop: ['console', 'debugger'], 
+  },
 })

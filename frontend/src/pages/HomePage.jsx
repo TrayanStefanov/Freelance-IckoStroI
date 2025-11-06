@@ -20,8 +20,6 @@ const Home = () => {
         <meta name="author" content={t("site.author")} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={t("site.pages.home.canonical")} />
-        <link rel="alternate" href="https://itskovstroy.com/" hreflang="en" />
-        <link rel="alternate" href="https://itskovstroy.com/bg" hreflang="bg" />
 
         {/* --- Open Graph --- */}
         <meta property="og:type" content={t("site.og.type")} />

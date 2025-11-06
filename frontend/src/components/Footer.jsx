@@ -30,7 +30,15 @@ const Footer = () => {
         <div className="flex flex-row justify-between w-full px-1 md:px-4 mt-4">
           <div className="aspect-[3/1] md:max-w-[240px] lg:max-w-[320px] min-w-[120px] self-center">
             <Link to="/">
-              <img src={t("navbar.logo")} className="w-40 md:w-64" alt="" />
+              <img
+                src={t("navbar.logo")}
+                alt="ITSKOV STROY logo"
+                width="514"
+                height="194"
+                class="w-40 md:w-64 h-auto"
+                loading="eager"
+                decoding="async"
+              />
             </Link>
           </div>
           <aside className="self-center flex flex-col justify-around md:gap-2">
