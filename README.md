@@ -44,8 +44,8 @@ It also gave me hands-on experience with multilingual site architecture and deli
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/TrayanStefanov/itskovstroy.git
-cd itskovstroy
+git clone https://github.com/TrayanStefanov/Freelance-IckoStroI.git
+cd Freelance-IckoStroI
 ```
 ### 2. Install backend dependancies
 ```bash
